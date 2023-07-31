@@ -59,6 +59,7 @@ cd magic
 make
 make install
 
+![magic1](https://github.com/ammulashiva/physical_design_using_asic/assets/140998900/2ca1576d-839c-4e49-9574-a5e3e05c6083)
 
 
 

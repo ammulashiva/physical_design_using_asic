@@ -11,3 +11,6 @@ $ sudo apt-get install build-essential clang bison flex \
 $ make config-gcc
 $ make 
 $ sudo make install
+
+![yosys](https://github.com/ammulashiva/physical_design_using_asic/assets/140998900/76ecfa86-4e5b-4bba-9c75-d0e98fed2b19)
+

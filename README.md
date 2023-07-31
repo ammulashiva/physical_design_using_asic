@@ -25,3 +25,9 @@ sudo apt-get install iverilog
 sudo apt update
 sudo apt install gtkwave
 
+![gtkwave](https://github.com/ammulashiva/physical_design_using_asic/assets/140998900/63bef04c-b53d-4175-b326-7212f403652c)
+
+# OpenSTA
+https://github.com/The-OpenROAD-Project/OpenSTA
+
+

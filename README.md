@@ -18,4 +18,10 @@ $ sudo make install
 # steps to install Iverilog
 sudo apt-get install iverilog
 
+![Iverilog](https://github.com/ammulashiva/physical_design_using_asic/assets/140998900/4106244b-db39-42e5-bc5d-e43dfe40a297)
+
+# gtkwave
+# Steps to install gtkwave
+sudo apt update
+sudo apt install gtkwave
 

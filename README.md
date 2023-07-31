@@ -14,3 +14,8 @@ $ sudo make install
 
 ![yosys](https://github.com/ammulashiva/physical_design_using_asic/assets/140998900/76ecfa86-4e5b-4bba-9c75-d0e98fed2b19)
 
+# Iverilog
+# steps to install Iverilog
+sudo apt-get install iverilog
+
+

@@ -1,6 +1,7 @@
 # physical_design_using_asic
 
-[Day 0](day-0) installation of required tools
+[Day 0](day-0) installation of required softwares
+
 [Day 1](day-1)
 
 ## Day 0 

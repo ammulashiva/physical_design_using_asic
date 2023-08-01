@@ -1,5 +1,10 @@
 # physical_design_using_asic
 
+[Day 0](day-0) installation of required tools
+[Day 1](day-1)
+
+## Day 0 
+
 steps to install yosys
 Yosys
 $ git clone https://github.com/YosysHQ/yosys.git
@@ -66,6 +71,8 @@ make install
 ![magic1](https://github.com/ammulashiva/physical_design_using_asic/assets/140998900/2ca1576d-839c-4e49-9574-a5e3e05c6083)
 ![magic2](https://github.com/ammulashiva/physical_design_using_asic/assets/140998900/bd855d1b-fce5-467c-8922-1dd30d994c64)
 
+
+## Day 1
 
 
 

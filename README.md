@@ -5,7 +5,16 @@
 [Day 1](day-1)
 
 ## Day 0 
-# Yosys
+
+<details>
+<summary> Summary </summary>
+    I installed the needed tools.
+    
+</details>
+
+<details>
+    <summary>Yosys</summary>
+    
 I installed yosys using following commands :
 
 $ git clone https://github.com/YosysHQ/yosys.git
@@ -21,16 +30,19 @@ $ sudo make install
 
 below is the screenshot showing successful launch: 
 ![yosys](https://github.com/ammulashiva/physical_design_using_asic/assets/140998900/76ecfa86-4e5b-4bba-9c75-d0e98fed2b19)
-
-# Iverilog
+</details>
+<details>
+    <summary>Iverilog</summary>
 
 I installed Iverilog using following commands:
 
 sudo apt-get install iverilog
 below is the screenshot showing successful launch: 
 ![Iverilog](https://github.com/ammulashiva/physical_design_using_asic/assets/140998900/4106244b-db39-42e5-bc5d-e43dfe40a297)
+</details>
+<details>
+    <summary>gtkwave</summary>
 
-# gtkwave
 I installed gtkwave using following command:
 
 sudo apt update
@@ -38,8 +50,11 @@ sudo apt install gtkwave
 below is the screenshot showing successful launch:
 
 ![gtkwave](https://github.com/ammulashiva/physical_design_using_asic/assets/140998900/63bef04c-b53d-4175-b326-7212f403652c)
+</details>
 
-# OpenSTA
+<details>
+    <summary>OpenSTA</summary>
+
 I installed and built OpenSTA (including the needed packages) using the following commands:
 
 sudo apt-get install cmake clang gcctcl swig bison flex
@@ -51,8 +66,11 @@ cmake ..
 make
 below is the screenshot showing successful launch: 
 ![OpenSTA](https://github.com/ammulashiva/physical_design_using_asic/assets/140998900/3ce1cccc-a154-4071-a9c8-682bc4c57fb2)
+</details>
 
-# ngspice
+<details>
+    <summary>ngspice</summary>
+
 i downloaded the tarball from https://sourceforge.net/projects/ngspice/files/ to a local directory, and unpacked it using following commands
 :
 $ tar -zxvf ngspice-37.tar.gz
@@ -66,8 +84,11 @@ $ sudo make install
 Below is the screenshot showing sucessful installation:
 
 ![ngspice](https://github.com/ammulashiva/physical_design_using_asic/assets/140998900/64efc675-08ed-4c9e-a4da-c6554baac603)
+</details>
 
-# magic
+<details>
+    <summary>magic</summary>
+
 I installed magic using the following commands:
 
 $   sudo apt-get install m4
@@ -91,7 +112,7 @@ Below is the screenshot showing sucessful installation:
 Below is the screenshot showing sucessful launch:
 
 ![magic2](https://github.com/ammulashiva/physical_design_using_asic/assets/140998900/bd855d1b-fce5-467c-8922-1dd30d994c64)
-
+</details>
 
 ## Day 1
 

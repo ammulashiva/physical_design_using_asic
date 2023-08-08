@@ -133,11 +133,15 @@ Below is the screenshot showing sucessful launch:
     <summary>Downloading Verilog codes and libraries</summary>
     The verilog codes of the 2x1 mux (good_mux.v) and its testbench (tb_good_mux.v) are taken from https://github.com/kunalg123/sky130RTLDesignAndSynthesisWorkshop.git
     and installed using the commands :
+    
     ```bash
+    
          # mkdir VLSI
          # cd VLSI
         # git clone https://github.com/kunalg123/sky130RTLDesignAndSynthesisWorkshop.git
         ```
+    Below image shows the library path i have downloaded :
+    ![download_v_files](https://github.com/ammulashiva/physical_design_using_asic/assets/140998900/8ffb3c6e-6689-4392-89dd-aeb7f365c843)
     
 </details>
 

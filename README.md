@@ -144,6 +144,18 @@ Below is the screenshot showing sucessful launch:
 
     
 </details>
+<details>
+    <summary>Simulation: Iverilog and gtkwave</summary>
+     I used the following commands to simulate and view the plots of the RTL design:
+	    here good_mux.v and tb_good_mux.v are the rtl code and testbench files respectively
+ ```bash
+ iverilog good_mux.v tb_good_mux.v
+ ./a.out
+ gtkwave tb_good_mux.vcd
+ ```
+ Below is the screenshot of the gtkwave plots:
+    
+</details>
 
 
 

@@ -2,8 +2,10 @@
 
 [Day 0](#day-0) installation of required softwares
 
-[Day 1](#day-1)
+[Day 1](#day-1) getting familiar with yosys, iverilog and gtkwave
+
 [Day 2](#day-2)
+
 
 ## Day 0 
 
@@ -191,6 +193,9 @@ yosys> show //shows the synthesied design
  
 </details>
 
+ 
+## Day 2
+<details></details>
 
 
 

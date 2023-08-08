@@ -154,7 +154,13 @@ Below is the screenshot showing sucessful launch:
  gtkwave tb_good_mux.vcd
  ```
  Below is the screenshot of the gtkwave plots:
-    
+  
+	
+</details>
+<details>
+	<summary>Synthesis: Yosys</summary>
+
+ 
 </details>
 
 

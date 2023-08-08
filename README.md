@@ -148,11 +148,13 @@ Below is the screenshot showing sucessful launch:
     <summary>Simulation: Iverilog and gtkwave</summary>
      I used the following commands to simulate and view the plots of the RTL design:
 	    here good_mux.v and tb_good_mux.v are the rtl code and testbench files respectively
- ```bash
- iverilog good_mux.v tb_good_mux.v
- ./a.out
- gtkwave tb_good_mux.vcd
- ```
+	
+```bash
+   $ iverilog good_mux.v tb_good_mux.v
+   $ ./a.out
+   $ gtkwave tb_good_mux.vcd
+```
+ 
  Below is the screenshot of the gtkwave plots:
 	
   ![mux_gtkwave](https://github.com/ammulashiva/physical_design_using_asic/assets/140998900/2ed5db9b-fa75-4815-a94c-6011d9f6a887)
@@ -179,8 +181,13 @@ yosys> show //shows the synthesied design
  yosys> write_verilog <file_name_netlist.v>
  yosys> write_verilog -noattr <file_name_netlist.v>
  ```
+ Below is the Screenshot showing the ABC results :
+ 
+![yosys_synthesis](https://github.com/ammulashiva/physical_design_using_asic/assets/140998900/d9c25654-95a2-4f49-bff8-899fc9e2681e)
  
  Below is the screenshot of the generated netlist:
+
+ ![circuit_lib](https://github.com/ammulashiva/physical_design_using_asic/assets/140998900/85261fcf-58c3-4020-815e-b36f88c88f6d)
  
 </details>
 

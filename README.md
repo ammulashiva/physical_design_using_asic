@@ -160,7 +160,27 @@ Below is the screenshot showing sucessful launch:
 </details>
 <details>
 	<summary>Synthesis: Yosys</summary>
+ In the directory of the verilog files, I used the following commands to synthesize and view the synthesized deisgn:
+	
+ ```bash
+# yosys
+yosys> read_liberty -lib <path to lib file> //path <..lib/sky130_fd_sc_hd__tt_025c_1v80.lib>
+yosys> read_verilog <path to verilog file> //path <good_mux.v>
+yosys> synth -top <top_module_name> //good_mux
+yosys> abc -liberty <path to lib file> //path <..lib/sky130_fd_sc_hd__tt_025c_1v80.lib>
+yosys> show //shows the synthesied design
+ ```
+ Below is the screenshot of the synthesized design:
+	
 
+	
+ I used the following commands to generate the netlist:
+ ```bash
+ yosys> write_verilog <file_name_netlist.v>
+ yosys> write_verilog -noattr <file_name_netlist.v>
+ ```
+ 
+ Below is the screenshot of the generated netlist:
  
 </details>
 

@@ -154,7 +154,8 @@ Below is the screenshot showing sucessful launch:
  gtkwave tb_good_mux.vcd
  ```
  Below is the screenshot of the gtkwave plots:
-  
+	
+  ![mux_gtkwave](https://github.com/ammulashiva/physical_design_using_asic/assets/140998900/2ed5db9b-fa75-4815-a94c-6011d9f6a887)
 	
 </details>
 <details>

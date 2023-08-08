@@ -3,6 +3,7 @@
 [Day 0](#day-0) installation of required softwares
 
 [Day 1](#day-1)
+[Day 2](#day-2)
 
 ## Day 0 
 
@@ -120,6 +121,26 @@ Below is the screenshot showing sucessful launch:
 </details>
 
 ## Day 1
+
+<details>
+<summary>Summary</summary>
+    
+             This section shows how I downloaded the libraries needed for the synthesys of verilog file and how i simulated and synthesized a 2x1 mux using iverilog and yosys respectively. 
+
+</details>
+
+<details>
+    <summary>Downloading Verilog codes and libraries</summary>
+    The verilog codes of the 2x1 mux (good_mux.v) and its testbench (tb_good_mux.v) are taken from https://github.com/kunalg123/sky130RTLDesignAndSynthesisWorkshop.git
+    and installed using the commands :
+    ```bash
+         # mkdir VLSI
+         # cd VLSI
+        # git clone https://github.com/kunalg123/sky130RTLDesignAndSynthesisWorkshop.git
+        ```
+    
+</details>
+
 
 
 

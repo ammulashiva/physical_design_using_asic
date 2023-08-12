@@ -506,6 +506,11 @@ Here 'a' is 3 bit and 'y' is 6 bits wide . when a is multiplied by 9 'a' , here 
  
 </details>
 
+## Day 3 
+ <details>
+	 <summary></summary>
+ </details>
+
 
 
 

@@ -242,8 +242,8 @@ each cell defines the voltage , temoerature, power leakage , area etc.. in all c
 	<summary>hierarchial vs flat synthesis</summary>
 
   Consider the verilog file multiple module which is given in the verilog_files directory shown below:
-
-![multiple_modules](https://github.com/ammulashiva/physical_design_using_asic/assets/140998900/553a02f3-6dfa-409a-a765-e9c839a98c6a)
+  
+![multiple_modules](https://github.com/ammulashiva/physical_design_using_asic/assets/140998900/587aee2f-aa90-4455-b3a5-8480999e1727)
 
 In this case the module multiple_modules iinstantiates two sub_modules where the sub_module1 implements the AND gate and sub_module2 implemets the OR gate which are integrated in the multiple_modules. Synthesis the multiple module using the sollowing commands:
 
@@ -265,9 +265,88 @@ Below is the figure showing the schematic of multiple_modules:
 
 Below is the netlist generated with sub_modules :
 
-![multiple modules _hier](https://github.com/ammulashiva/physical_design_using_asic/assets/140998900/4873c3b5-20bf-4604-a9ef-4f2a9960518c)
+```bash
 
-  
+module multiple_modules(a, b, c, y);
+  input a;
+  wire a;
+  input b;
+  wire b;
+  input c;
+  wire c;
+  wire net1;
+  output y;
+  wire y;
+  sub_module1 u1 (
+    .a(a),
+    .b(b),
+    .y(net1)
+  );
+  sub_module2 u2 (
+    .a(net1),
+    .b(c),
+    .y(y)
+  );
+endmodule
+
+module sub_module1(a, b, y);
+  wire _0_;
+  wire _1_;
+  wire _2_;
+  input a;
+  wire a;
+  input b;
+  wire b;
+  output y;
+  wire y;
+  sky130_fd_sc_hd__and2_0 _3_ (
+    .A(_1_),
+    .B(_0_),
+    .X(_2_)
+  );
+  assign _1_ = b;
+  assign _0_ = a;
+  assign y = _2_;
+endmodule
+
+module sub_module3(a, b, y);
+  wire _0_;
+  wire _1_;
+  wire _2_;
+  input a;
+  wire a;
+  input b;
+  wire b;
+  output y;
+  wire y;
+  sky130_fd_sc_hd__or2_0 _3_ (
+    .A(_1_),
+    .B(_0_),
+    .X(_2_)
+  );
+  assign _1_ = b;
+  assign _0_ = a;
+  assign y = _2_;
+endmodule
+```
+
+## Flat Synthesis
+   Flattening the hierarchy means simplifying the hierarchical structure of a design by collapsing or merging lower-level modules or blocks into a single, unified representation. In yosys the flattening can be done with flat command. Yosys illustration of flattening the hiererchy.
+   ```bash
+
+root@ammula-shiva-kumar-HP-Laptop-15-da1xxx:/home/ammula-shiva-kumar/VLSI/sky130RTLDesignAndSynthesisWorkshop/verilog_files# yosys
+read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_verilog multiple_modules.v
+synth -top multiple_modules.v
+synth -top multiple_modules
+abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+show
+flatten
+write_verilog multiple_modules_flat.v
+write_verilog -noattr multiple_modules_flat.v
+show
+```
+  Below is the figure showing the netlist of the multiple_modules after flattening :
 </details>
 
 

@@ -214,7 +214,19 @@ yosys> show //shows the synthesied design
     cd VLSI/sky130RTLDesignAndSynthesisWorkshop/lib/
     gvim sky130_fd_sc_hd__tt_025C_1v80.lib
  ```
+    ![timing_lib](https://github.com/ammulashiva/physical_design_using_asic/assets/140998900/4f542fd2-7f69-4a0b-8a31-e41830a56114)
+
+    One of the fundamental parameters stored within .lib files comprises P.V.T. parameters, where P denotes Process, V denotes Voltage, and T denotes Temperature. The variations in these parameters can cause significant changes in the performance of circuits.
+
+    Process Variation: During the manufacturing process, there may be some deviations in the transistor characteristics, causing non-uniformity across the semiconductor wafer. Critical parameters like oxide thickness, dopant concentration, and transistor dimensions experience alterations.
+
+    Voltage Variation: Voltage regulators might exhibit  variability in their output voltage  over time, inducing fluctuations in current and  impacting the operational speed of the circuits.
+
+    Temperature Variation: The functionality of a semiconductor devices is sensitive to changes in temperature, it effects various parameters that significantly alters the transfer function.
+     
+    The .lib library is bucket with full of cells as shown below:
     
+
 </details>
 
 

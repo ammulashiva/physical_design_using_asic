@@ -4,7 +4,7 @@
 
 [Day 1](#day-1) getting familiar with yosys, iverilog and gtkwave
 
-[Day 2](#day-2)  Timing libs,Hierarchical vs flat synthesis and efficient flop coding styles
+[Day 2](#day-2) Timing libs,Hierarchical vs flat synthesis and efficient flop coding styles
 
 [Day 3](#day-3)
 

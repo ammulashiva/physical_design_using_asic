@@ -468,7 +468,9 @@ Below figure shows the simulation of asynchronous reset d flop :
 
 ![async_res_simu](https://github.com/ammulashiva/physical_design_using_asic/assets/140998900/ec714932-6a80-4943-bcfc-3d43cd13404a)
 
-## 
+## Some optimizations
+
+
 </details>
 
 

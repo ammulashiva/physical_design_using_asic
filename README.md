@@ -378,6 +378,7 @@ Below figure shows the Schematic of submodule :
  ## Flops and flop Coding Styles
      A flop is a Storage element which can store the data Synchronously or asynchronously, it has a input clock and a set and a reset ,the set and reset can be synchronous or asynchronus . for example if there is a large combinational circuit between two registers then it may lead to setup violation so in order to solve the problem we need to use a flop in between the combinational circuit so that the delay gets divided and setup violation doesnt happen.
      below are the various flops with different configurations:
+     
      code for asynchronous set d flop :
      
 ```bash
@@ -440,6 +441,20 @@ end
 endmodule
 
 ```
+## Simulation of above flops
+
+The synthesis and simulation of verilog files can be done by usind the following commands:
+
+```bash
+
+$iverilog <Filename.v>
+$./a.out
+$gtkwave <dumpfile_name.vcd>
+
+```
+Below figure shows the simulation of asynchronous set d flop :
+
+
 
 </details>
 

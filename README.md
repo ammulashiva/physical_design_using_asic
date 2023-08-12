@@ -4,7 +4,7 @@
 
 [Day 1](#day-1) getting familiar with yosys, iverilog and gtkwave
 
-[Day 2](#day-2)
+[Day 2](#day-2)  Timing libs,Hierarchical vs flat synthesis and efficient flop coding styles
 
 [Day 3](#day-3)
 
@@ -201,7 +201,7 @@ yosys> show //shows the synthesied design
 <details>
 	<summary>Summary</summary>
 
- Timing libs,Hierarchical vs flat synthesis and efficient flop coding styles
+ viewed the Timing libs learnt some fundamental parameters in .lib file , done some examples on Hierarchical vs flat synthesis and efficient flop coding styles and learnt some of the basic optimizations . 
  
 </details>
 

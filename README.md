@@ -454,8 +454,21 @@ $gtkwave <dumpfile_name.vcd>
 ```
 Below figure shows the simulation of asynchronous set d flop :
 
+![async_set_simu](https://github.com/ammulashiva/physical_design_using_asic/assets/140998900/13a6f7b6-b059-4e12-a94d-0653722c2c86)
 
+Below figure shows the simulation of  synchronous reset d flipflop:
 
+![sync_res_simu](https://github.com/ammulashiva/physical_design_using_asic/assets/140998900/063079d3-852b-44cd-b958-cc388e9d63dd)
+
+Below figure shows the simulation of asynchronous and synchronous reset d flop :
+
+![asyncres_syncres_simu](https://github.com/ammulashiva/physical_design_using_asic/assets/140998900/07dcb88c-c515-471b-93f2-b13ef1fe28c9)
+
+Below figure shows the simulation of asynchronous reset d flop :
+
+![async_res_simu](https://github.com/ammulashiva/physical_design_using_asic/assets/140998900/ec714932-6a80-4943-bcfc-3d43cd13404a)
+
+## 
 </details>
 
 

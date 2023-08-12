@@ -342,11 +342,21 @@ synth -top multiple_modules
 abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 show
 flatten
-write_verilog multiple_modules_flat.v
 write_verilog -noattr multiple_modules_flat.v
-show
+!gvim multiple_modules_flat.v
+
 ```
   Below is the figure showing the netlist of the multiple_modules after flattening :
+
+  ![multiple_modules_flat](https://github.com/ammulashiva/physical_design_using_asic/assets/140998900/09e70b0f-0a26-44bf-8055-94f9369de3c0)
+
+  Below figure shows the schematic ofmultiple modules after flattening :
+  
+![multiple_modules_flat_schematic](https://github.com/ammulashiva/physical_design_using_asic/assets/140998900/5e29ab99-df3e-4e6a-a47c-73bfc87a78c1)
+
+
+![multiple_modules_submodule1](https://github.com/ammulashiva/physical_design_using_asic/assets/140998900/e1f77a95-7512-45fd-b782-09966a06b0b2)
+
 </details>
 
 

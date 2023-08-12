@@ -6,6 +6,9 @@
 
 [Day 2](#day-2)
 
+[Day 3](#day-3)
+
+
 
 ## Day 0 
 
@@ -195,7 +198,24 @@ yosys> show //shows the synthesied design
 
  
 ## Day 2
-<details></details>
+<details>
+	<summary>Summary</summary>
+
+ Timing libs,Hierarchical vs flat synthesis and efficient flop coding styles
+ 
+</details>
+
+<details>
+	<summary>intro. to timing libs.</summary>
+
+ To view the contents inside the .lib file type the following command :
+
+ ```bash
+    cd VLSI/sky130RTLDesignAndSynthesisWorkshop/lib/
+    gvim sky130_fd_sc_hd__tt_025C_1v80.lib
+ ```
+    
+</details>
 
 
 

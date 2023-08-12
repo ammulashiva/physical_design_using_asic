@@ -243,6 +243,30 @@ each cell defines the voltage , temoerature, power leakage , area etc.. in all c
 
   Consider the verilog file multiple module which is given in the verilog_files directory shown below:
 
+![multiple_modules](https://github.com/ammulashiva/physical_design_using_asic/assets/140998900/553a02f3-6dfa-409a-a765-e9c839a98c6a)
+
+In this case the module multiple_modules iinstantiates two sub_modules where the sub_module1 implements the AND gate and sub_module2 implemets the OR gate which are integrated in the multiple_modules. Synthesis the multiple module using the sollowing commands:
+
+```bash
+
+#yosys
+read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_verilog multiple_modules.v
+synth -top multiple_modules // synthesis of multiple_modules
+abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+show multiple_modules  //cmd to view the synthesised design in blocks of sub_modules
+write_verilog -noattr multiple_modules_hier.v  //creates the netlist in hirearichal modules
+!gvim multiple_modules_hier.v  // view the net list
+
+```
+Below is the figure showing the schematic of multiple_modules:
+
+![multiple_modules_schematic](https://github.com/ammulashiva/physical_design_using_asic/assets/140998900/fe6b563b-7680-4e1d-bb9c-250e9a523841)
+
+Below is the netlist generated with sub_modules :
+
+![multiple modules _hier](https://github.com/ammulashiva/physical_design_using_asic/assets/140998900/4873c3b5-20bf-4604-a9ef-4f2a9960518c)
+
   
 </details>
 

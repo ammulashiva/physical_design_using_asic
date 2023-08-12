@@ -226,7 +226,24 @@ yosys> show //shows the synthesied design
      
     The .lib library is bucket with full of cells as shown below:
     
+![different cells](https://github.com/ammulashiva/physical_design_using_asic/assets/140998900/238e3699-d6a9-4910-926d-13ef53ef827c)
 
+This file also defines the units for parameters like voltage, power, current, capacitance, and resistance. Within the .lib library, each standard cell consists a set of parameters specific to that cell's features.
+
+Consider the a2111oi gate whose parameters and verilog files is shown below:
+
+![cell_a2111o](https://github.com/ammulashiva/physical_design_using_asic/assets/140998900/43f3f2b8-21da-446e-96e4-a7974d869fba)
+
+each cell defines the voltage , temoerature, power leakage , area etc.. in all combinations of inputs for the synthesiser.
+
+</details>
+
+<details>
+	<summary>hierarchial vs flat synthesis</summary>
+
+  Consider the verilog file multiple module which is given in the verilog_files directory shown below:
+
+  
 </details>
 
 

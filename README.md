@@ -372,6 +372,77 @@ Below figure shows the Schematic of submodule :
 
 </details>
 
+<details>
+	<summary>Various Flop coding styles and optimizations </summary>
+
+ ## Flops and flop Coding Styles
+     A flop is a Storage element which can store the data Synchronously or asynchronously, it has a input clock and a set and a reset ,the set and reset can be synchronous or asynchronus . for example if there is a large combinational circuit between two registers then it may lead to setup violation so in order to solve the problem we need to use a flop in between the combinational circuit so that the delay gets divided and setup violation doesnt happen.
+     below are the various flops with different configurations:
+     code for asynchronous set d flop :
+     
+```bash
+     module dff_async_set ( input clk ,  input async_set , input d , output reg q );
+     always @ (posedge clk , posedge async_set)
+begin
+	if(async_set)
+		q <= 1'b1;
+	else	
+		q <= d;
+end
+endmodule
+
+```
+Code for synchronous reset d flipflop :
+
+```bash
+
+module dff_syncres ( input clk , input async_reset , input sync_reset , input d , output reg q );
+always @ (posedge clk )
+begin
+	if (sync_reset)
+		q <= 1'b0;
+	else	
+		q <= d;
+end
+endmodule
+
+```
+
+Code for asynchronous and synchronous reset d flop :
+
+```bash
+
+  module dff_asyncres_syncres ( input clk , input async_reset , input sync_reset , input d , output reg q );
+  always @ (posedge clk , posedge async_reset)
+  begin
+	if(async_reset)
+		q <= 1'b0;
+	else if (sync_reset)
+		q <= 1'b0;
+	else	
+		q <= d;
+  end
+ endmodule
+
+```
+Code for asynchronous reset d flop :
+
+```bash
+
+module dff_asyncres ( input clk ,  input async_reset , input d , output reg q );
+always @ (posedge clk , posedge async_reset)
+begin
+	if(async_reset)
+		q <= 1'b0;
+	else	
+		q <= d;
+end
+endmodule
+
+```
+
+</details>
+
 
 
 

@@ -470,7 +470,34 @@ Below figure shows the simulation of asynchronous reset d flop :
 
 ## Some optimizations
 
+Consider the module mul2.v shown below:
 
+```bash
+
+module mul2 (input [2:0] a, output [3:0] y);
+	assign y = a * 2;
+endmodule
+
+```
+Here 'a' is 3 bit and 'y' is 4 bits wide . when a is multiplied by 2 'a' gets shifted to left by 1 bit so the output should be just 'a' is connected to y[2:0] and y[3] connected ground
+now let us see how the optimizations will be done 
+ here in the below figure we see that theoutput is as i have described:
+
+ Now consider the module mult_8.v shown below:
+
+```bash
+
+module mult8 (input [2:0] a , output [5:0] y);
+	assign y = a * 9;
+endmodule
+
+```
+Here 'a' is 3 bit and 'y' is 6 bits wide . when a is multiplied by 9 'a' , here y can be written as 
+  y = a * (8+1) ;
+  y = a * 8 + a ;
+  therefore here 'y'gets shifted to left by 3 bits and a'a' is added, so the output should be just '{a, a}' Here 'a' is stacked 2 times to get 'y'. now let us see how the optimizations will be done 
+ here in the below figure we see that theoutput is as i have described:
+ 
 </details>
 
 

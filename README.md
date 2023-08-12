@@ -483,6 +483,9 @@ Here 'a' is 3 bit and 'y' is 4 bits wide . when a is multiplied by 2 'a' gets sh
 now let us see how the optimizations will be done 
  here in the below figure we see that theoutput is as i have described:
 
+ ![mult_2_schematic](https://github.com/ammulashiva/physical_design_using_asic/assets/140998900/c31b7665-a331-430c-bf49-b3ce7f7caf0f)
+
+
  Now consider the module mult_8.v shown below:
 
 ```bash
@@ -497,6 +500,9 @@ Here 'a' is 3 bit and 'y' is 6 bits wide . when a is multiplied by 9 'a' , here 
   y = a * 8 + a ;
   therefore here 'y'gets shifted to left by 3 bits and a'a' is added, so the output should be just '{a, a}' Here 'a' is stacked 2 times to get 'y'. now let us see how the optimizations will be done 
  here in the below figure we see that theoutput is as i have described:
+
+ ![mult8_schematic](https://github.com/ammulashiva/physical_design_using_asic/assets/140998900/bce8a772-05c0-4de7-9517-d0625f7f33b0)
+ 
  
 </details>
 

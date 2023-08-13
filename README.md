@@ -355,7 +355,13 @@ write_verilog -noattr multiple_modules_flat.v
 ![multiple_modules_flat_schematic](https://github.com/ammulashiva/physical_design_using_asic/assets/140998900/5e29ab99-df3e-4e6a-a47c-73bfc87a78c1)
 
 ## Steps to synthesise sub module
-    Suppose a multiplier design needs to be used in numerous instances. Rather than undergoing synthesis six times independently, the preferred approach is to synthesize it once and then duplicate it within the primary module. Using module-level synthesis becomes advantageous when dealing with multiple occurrences of identical modules. Another reason for synthesizing submodule is to follow the principle of divide and conque for extensive designs that may not be optimized effectively, synthesizing the design module by module ensures that each module is effectively optimized.
+
+    Suppose a multiplier design needs to be used in numerous instances. Rather than undergoing synthesis six
+    times independently, the preferred approach is to synthesize it once and then duplicate it within the 
+    primary module. Using module-level synthesis becomes advantageous when dealing with multiple occurrences 
+    of identical modules. Another reason for synthesizing submodule is to follow the principle of divide and
+    conque for extensive designs that may not be optimized effectively, synthesizing the design module by 
+    module ensures that each module is effectively optimized.
     
     The commands used in Yosys to Synthesise submodule are:
 
@@ -496,8 +502,11 @@ endmodule
 
 ```
 Here 'a' is 3 bit and 'y' is 6 bits wide . when a is multiplied by 9 'a' , here y can be written as 
+
   y = a * (8+1) ;
+  
   y = a * 8 + a ;
+  
   therefore here 'y'gets shifted to left by 3 bits and a'a' is added, so the output should be just '{a, a}' Here 'a' is stacked 2 times to get 'y'. now let us see how the optimizations will be done 
  here in the below figure we see that theoutput is as i have described:
 

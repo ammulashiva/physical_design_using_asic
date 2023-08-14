@@ -818,15 +818,15 @@ endmodule
 
 ```
 
-## Blocking And Non Blocking Statements in Verilog :
+### Blocking And Non Blocking Statements in Verilog :
 
 
-# Inside Always Block
+#### Inside Always Block
  - if we use operator '=' then
  - executes the ststments in the order it is written
  - so the first statment is evaluated before the second statment
 
-# Inside Always Block
+#### Inside Always Block
  - if we use operator '<=' then
  - executes all the RHS when always block is entered and assigns to LHS .
  - Parallel Evaluation .
@@ -900,7 +900,8 @@ the simulation of the above example after synthesis and net list generation :
 </details>
 
 <details>
-	<summary><strong>Lab on Synthesis Simulation mismatch and Blocking Statments</strong></summary>
+	
+<summary><strong>Lab on Synthesis Simulation mismatch and B)locking Statments </strong></summary>
 
  
 </details>

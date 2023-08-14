@@ -518,7 +518,7 @@ Here 'a' is 3 bit and 'y' is 6 bits wide . when a is multiplied by 9 'a' , here 
 ## Day 3 
  <details>
 	 <summary>Summary</summary>
-  here
+  here combinational and sequential logics have been introduced and some examples were done on sequential and combinational optimisations.
        
   
  </details>

@@ -8,6 +8,10 @@
 
 [Day 3](#day-3) Combinational and sequential Optimizations
 
+[Day 4](#day-4) GLS, Blocking vs non blocking and Synthesis -simulation mismatch
+
+[Day 5](#day-5) if,case,for loop and for generate
+
 
 
 ## Day 0 
@@ -776,4 +780,12 @@ the synthesised schematic is shown below :
       
 </details>
 
+## Day 4
+<details>
+	<summary>GLS, Blocking vs non blocking and Synthesis -simulation mismatch</summary>
+
+ ## GLS Concepts And Flow Using Verilog
+
+  
+</details>
 

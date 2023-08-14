@@ -5,13 +5,13 @@
 ## Day 0 - Installation of Required Softwares
 
 <details>
-<summary> Summary </summary>
+<summary> <strong>Summary</strong> </summary>
     I installed the needed tools.
     
 </details>
 
 <details>
-    <summary>Yosys</summary>
+    <summary><strong>Yosys</strong></summary>
     
 I installed yosys using following commands :
 ```bash
@@ -32,7 +32,7 @@ below is the screenshot showing successful launch:
 ![yosys](https://github.com/ammulashiva/physical_design_using_asic/assets/140998900/76ecfa86-4e5b-4bba-9c75-d0e98fed2b19)
 </details>
 <details>
-    <summary>Iverilog</summary>
+    <summary><strong>Iverilog</strong></summary>
 
 I installed Iverilog using following commands:
 ```bash
@@ -42,7 +42,7 @@ below is the screenshot showing successful launch:
 ![Iverilog](https://github.com/ammulashiva/physical_design_using_asic/assets/140998900/4106244b-db39-42e5-bc5d-e43dfe40a297)
 </details>
 <details>
-    <summary>gtkwave</summary>
+    <summary><strong>gtkwave</strong></summary>
 
 I installed gtkwave using following command:
 ```bash
@@ -55,7 +55,7 @@ below is the screenshot showing successful launch:
 </details>
 
 <details>
-    <summary>OpenSTA</summary>
+    <summary><strong>OpenSTA</strong></summary>
 
 I installed and built OpenSTA (including the needed packages) using the following commands:
 ```bash
@@ -72,7 +72,7 @@ below is the screenshot showing successful launch:
 </details>
 
 <details>
-    <summary>ngspice</summary>
+    <summary><strong>ngspice</strong></summary>
 
 i downloaded the tarball from https://sourceforge.net/projects/ngspice/files/ to a local directory, and unpacked it using following commands:
 ```bash
@@ -90,7 +90,7 @@ Below is the screenshot showing sucessful installation:
 </details>
 
 <details>
-    <summary>magic</summary>
+    <summary><strong>magic</strong></summary>
 
 I installed magic using the following commands:
 ```bash
@@ -120,14 +120,14 @@ Below is the screenshot showing sucessful launch:
 ## Day 1 - Getting familiar with Yosys, Iverilog and gtkwave
 
 <details>
-<summary>Summary</summary>
+<summary><strong>Summary</strong></summary>
     
              This section shows how I downloaded the libraries needed for the synthesys of verilog file and how i simulated and synthesized a 2x1 mux using iverilog and yosys respectively. 
 
 </details>
 
 <details>
-    <summary>Downloading Verilog codes and libraries</summary>
+    <summary><strong>Downloading Verilog codes and libraries</strong></summary>
     The verilog codes of the 2x1 mux (good_mux.v) and its testbench (tb_good_mux.v) are taken from https://github.com/kunalg123/sky130RTLDesignAndSynthesisWorkshop.git
     and installed using the commands :
     ```bash
@@ -142,7 +142,7 @@ Below is the screenshot showing sucessful launch:
     
 </details>
 <details>
-    <summary>Simulation: Iverilog and gtkwave</summary>
+    <summary><strong>Simulation: Iverilog and gtkwave</strong></summary>
      I used the following commands to simulate and view the plots of the RTL design:
 	    here good_mux.v and tb_good_mux.v are the rtl code and testbench files respectively
 	
@@ -158,7 +158,7 @@ Below is the screenshot showing sucessful launch:
 	
 </details>
 <details>
-	<summary>Synthesis: Yosys</summary>
+	<summary><strong>Synthesis: Yosys</strong></summary>
  In the directory of the verilog files, I used the following commands to synthesize and view the synthesized deisgn:
 	
  ```bash
@@ -191,14 +191,14 @@ yosys> show //shows the synthesied design
  
 ## Day 2 - Timing libs,Hierarchical vs Flat Synthesis and Efficient Flop Coding Styles
 <details>
-	<summary>Summary</summary>
+	<summary><strong>Summary</strong></summary>
 
  viewed the Timing libs learnt some fundamental parameters in .lib file , done some examples on Hierarchical vs flat synthesis and efficient flop coding styles and learnt some of the basic optimizations . 
  
 </details>
 
 <details>
-	<summary>intro. to timing libs.</summary>
+	<summary><strong>Intro. to timing libs.</strong></summary>
 
  To view the contents inside the .lib file type the following command :
 
@@ -231,7 +231,7 @@ each cell defines the voltage , temoerature, power leakage , area etc.. in all c
 </details>
 
 <details>
-	<summary>hierarchial vs flat synthesis</summary>
+	<summary><strong>hierarchial vs flat synthesis</strong></summary>
 
   Consider the verilog file multiple module which is given in the verilog_files directory shown below:
   
@@ -371,7 +371,7 @@ Below figure shows the Schematic of submodule :
 </details>
 
 <details>
-	<summary>Various Flop coding styles and optimizations </summary>
+	<summary><strong>Various Flop coding styles and optimizations </strong></summary>
 
  ## Flops and flop Coding Styles
      A flop is a Storage element which can store the data Synchronously or asynchronously, it has a input clock and a set and a reset ,the set and reset can be synchronous or asynchronus . for example if there is a large combinational circuit between two registers then it may lead to setup violation so in order to solve the problem we need to use a flop in between the combinational circuit so that the delay gets divided and setup violation doesnt happen.
@@ -509,14 +509,14 @@ Here 'a' is 3 bit and 'y' is 6 bits wide . when a is multiplied by 9 'a' , here 
 
 ## Day 3 - Combinational and Sequential Optimizations
  <details>
-	 <summary>Summary</summary>
+	 <summary><strong>Summary</strong></summary>
   here combinational and sequential logics have been introduced and some examples were done on sequential and combinational optimisations.
        
   
  </details>
 
 <details>
-	<summary>intro.to Optimizations</summary>
+	<summary><strong>Intro.to Optimizations</strong></summary>
 
 ## Combinational logic OPtimizations
 
@@ -574,7 +574,7 @@ Y = (A.0 )'
 </details>
 
 <details>
-	<summary>Combinational LOgic Optimisations</summary>
+	<summary><strong>Combinational LOgic Optimisations</strong></summary>
 
  Consider an example shown below
 
@@ -654,7 +654,7 @@ the synthesised schematic is shown below :
 
 
 <details>
-	<summary>Sequential LOgic Optimisations</summary>
+	<summary><strong>Sequential LOgic Optimisations</strong></summary>
 
  Consider an example of sequential circuit :
 
@@ -738,7 +738,7 @@ the synthesied schematic is shown below :
 
 
 <details>
-	<summary>sequential optimisations for unused outputs</summary>
+	<summary><strong>sequential optimisations for unused outputs</strong></summary>
 
      consider an example shown below :
 
@@ -770,7 +770,7 @@ the synthesised schematic is shown below :
 
 ## Day 4 -  GLS, Blocking vs non Blocking and Synthesis - Simulation mismatch
 <details>
-	<summary>GLS, Blocking vs non blocking and Synthesis -simulation mismatch</summary>
+	<summary><strong>GLS, Blocking vs non blocking and Synthesis -simulation mismatch</strong></summary>
 
  ## GLS Concepts And Flow Using Verilog
 
@@ -834,7 +834,7 @@ endmodule
 </details>
 
 <details>
-	<Summary>Labs On GLS and Synthesis Simulation Mismatch </Summary>
+	<Summary><strong>Labs On GLS and Synthesis Simulation Mismatch </strong></Summary>
 
 Condider an example shown below:
 ```bash
@@ -899,6 +899,10 @@ the simulation of the above example after synthesis and net list generation :
  
 </details>
 
+<details>
+	<summary><strong>Lab on Synthesis Simulation mismatch and Blocking Statments</strong></summary>
 
+ 
+</details>
 
 ## Day 5 - if,case,for loop and for Generate

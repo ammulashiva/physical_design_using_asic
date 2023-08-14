@@ -786,6 +786,11 @@ the synthesised schematic is shown below :
 
  ## GLS Concepts And Flow Using Verilog
 
-  
+  GLS- Gate level Synthesis 
+
+      Here gate level netlist is taken and the testbench for it and the Gte level verilog models are given to the iverilog to generate a value change dump format which is then given to the gtkwave to view the output .
+      below figure shows the process :
+
+      
 </details>
 

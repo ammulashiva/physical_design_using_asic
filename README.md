@@ -509,9 +509,9 @@ Here 'a' is 3 bit and 'y' is 6 bits wide . when a is multiplied by 9 'a' , here 
 ## Day 3 - Combinational and Sequential Optimizations
  <details>
 	 <summary><strong>Summary</strong></summary>
-  here combinational and sequential logics have been introduced and some examples were done on sequential and combinational optimisations.
+	 
+**Here** combinational and sequential logics have been introduced and some examples were done on sequential and combinational optimisations.
        
-  
  </details>
 
 <details>
@@ -519,7 +519,7 @@ Here 'a' is 3 bit and 'y' is 6 bits wide . when a is multiplied by 9 'a' , here 
 
 ### Combinational logic OPtimizations
 
-#### squeesing the logic to get the most optimised design
+#### squesing the logic to get the most optimised design
    - Area and power savings
 #### Constant Propagation
  - Direct optimisation
@@ -527,29 +527,31 @@ Here 'a' is 3 bit and 'y' is 6 bits wide . when a is multiplied by 9 'a' , here 
  - K-Map
  - Quine-Mckluskey
 
-      here let us consider an example of **constant propagation** as shown in the below figure :
+      Here let us consider an example of **constant propagation** as shown in the below figure :
 
 ![constant_propagation_ex](https://github.com/ammulashiva/physical_design_using_asic/assets/140998900/8b784e64-1eb8-4255-a3ba-01de4fada482)
 
-       here Y= ((AB)+C)'
+here **Y= ((AB)+C)'**
 
-       If A = 0 ;then
+If **A = 0** ;then
        
-       Y = C'
-       In this example A is constant so the logic got opthe boolian equation is optimisedimised so the number of transisters and area got reduced.
+**Y = C'**
 
-       Now consider another example in boolian logic optimization :
+**In** this example A is constant so the logic got opthe boolian equation is optimisedimised so the number of transisters and area got reduced.
 
-       A?(B?C:(C?A:0)):(!C)
+Now consider another example in **boolian logic optimization** :
 
-       => A'C' +A[BC+B'AC}
+**A?(B?C:(C?A:0)):(!C)**
 
-       => A'C' + ABC + AB'C
+=>** A'C' +A[BC+B'AC}**
 
-       => A'C' + AC[B+B']
-       => A'C' + AC 
+=>** A'C' + ABC + AB'C**
 
-In this example the boolian equation is optimised. 
+=> **A'C' + AC[B+B']**
+
+=> **A'C' + AC **
+
+In this example the boolian equation is **optimised**. 
 
 ### Sequential Logic Optimisations
 
@@ -566,9 +568,9 @@ Consider an example in sequential logic as shown in the below figure:
 
 here as D is grounded 'Q' is always '0' So
 
-Y = (A.0 )'
+**Y = (A.0 )'**
 
-=> y = 1 (Optimised)
+=>** y = 1** (Optimised)
 
 </details>
 
@@ -584,9 +586,9 @@ Y = (A.0 )'
 endmodule
 
 ```
-here y = a'.0 + a.b
+Here **y = a'.0 + a.b**
 
- => y = a.b 
+ => **y = a.b **
 
  the commands used in yosys are :
 
@@ -603,12 +605,12 @@ show
 
 ```
  
- synthesise the code using yosys the schematic is shown below :
+ synthesised the code using yosys and the schematic is shown below :
 
 ![opt_check_schematic](https://github.com/ammulashiva/physical_design_using_asic/assets/140998900/a7842ea5-88a4-461d-9092-38ef95854817)
 
 
-Example 2 :
+**Example 2** :
 
 ```bash
 
@@ -619,16 +621,16 @@ endmodule
 ```
 here 
 
-Y = a'b +a
+**Y = a'b +a**
 
-=> Y = a + b ;
+=>** Y = a + b** ;
 
 the synthesised schematic is shown below :
 
 ![opt_check2_schematic](https://github.com/ammulashiva/physical_design_using_asic/assets/140998900/92cd7042-95ef-4579-8429-fdee7f58ca1b)
 
 
- Example 3 :
+ **Example 3** :
 
 ```bash
 
@@ -639,11 +641,11 @@ endmodule
 ```
 here 
 
-Y = a'0 + a[a'.0 +ab]
+**Y = a'0 + a[a'.0 +ab]**
 
-=> 0+ abc
+=>** 0+ abc**
 
-=> Y = a.b.c ;
+=> **Y = a.b.c **;
 
 the synthesised schematic is shown below :
 
@@ -655,7 +657,7 @@ the synthesised schematic is shown below :
 <details>
 	<summary><strong>Sequential LOgic Optimisations</strong></summary>
 
- Consider an example of sequential circuit :
+ Consider an example **1** of **sequential circuit** :
 
  ```bash
 module dff_const1(input clk, input reset, output reg q);
@@ -675,7 +677,7 @@ the synthesied schematic is shown below :
 
 ![dff_const1](https://github.com/ammulashiva/physical_design_using_asic/assets/140998900/368b1b7d-9376-4e7c-b3c1-f5a0ad4fc972)
 
-Example 2:
+**Example 2**:
 
 ```bash
 module dff_const2(input clk, input reset, output reg q);
@@ -696,7 +698,7 @@ the synthesied schematic is shown below :
 
 ![dff_const2](https://github.com/ammulashiva/physical_design_using_asic/assets/140998900/85b07b6f-447e-4ec1-8c6c-69247ac0333b)
 
-Example 3:
+**Example 3**:
 
 ```bash
 module dff_const3(input clk, input reset, output reg q);
@@ -726,7 +728,7 @@ as shown in the below figure :
 ![dff_const3_diagram](https://github.com/ammulashiva/physical_design_using_asic/assets/140998900/6764fc12-28b6-441e-b12e-b6b86c0e127b)
 
 
-here use the command dfflibmab -liberty ../lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib to include the dff libs
+**Here** use the command dfflibmab -liberty ../lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib to include the dff libs
 the synthesied schematic is shown below :
 
 ![dff_const3](https://github.com/ammulashiva/physical_design_using_asic/assets/140998900/b79d7ad5-9714-4009-b04f-e8ca80ea29a8)
@@ -759,7 +761,7 @@ endmodule
 
 ```
 
-here the bits count[1:2] are unused onlythe bit cunt[0] is used so other redundancy bits are removed in the synthesis 
+**Here** the bits count[1:2] are unused onlythe bit cunt[0] is used so other redundancy bits are removed in the synthesis 
 the synthesised schematic is shown below :
 
 ![counter_opt_schematic](https://github.com/ammulashiva/physical_design_using_asic/assets/140998900/3c988a17-2728-4083-b5f6-f759d595efd8)
@@ -773,14 +775,16 @@ the synthesised schematic is shown below :
 
  ## GLS Concepts And Flow Using Verilog
 
-  GLS- Gate level Synthesis 
+  **GLS**- Gate level Synthesis 
 
-      Here gate level netlist is taken and the testbench for it and the Gte level verilog models are given to the iverilog to generate a value change dump format which is then given to the gtkwave to view the output .
-      below figure shows the process :
+Here gate level netlist is taken and the testbench for it and the Gte level verilog models are given to the iverilog to generate a value change dump format which is then given to the gtkwave to view the output .
 
-      ![GLS](https://github.com/ammulashiva/physical_design_using_asic/assets/140998900/7adfa7ce-5dff-4d4e-bab1-4781d0ee9895)
+Below figure shows the process :
 
-there is a need th check the netlist after the synthesis because there can be a mismatch. 
+![GLS](https://github.com/ammulashiva/physical_design_using_asic/assets/140998900/7adfa7ce-5dff-4d4e-bab1-4781d0ee9895)
+
+There is a need to check the netlist after the synthesis because there can be a mismatch. 
+
 # Reasons to Synthesis And Simulation Mismatch :
  - Missing Sensitivity List
  - Blocking VS Non Bolcking List
@@ -801,7 +805,7 @@ end
 endmodule
 
 ```
-in the above code when 'sel changes the always block is evaluated and the 'y' values get updated. But for a mux 'y' gets updated when ever the value of 'i0' or 'i1' changes with respect to the 'sel' value so the simulatior shows the wrong value/output . so in order to correct that that we need to replace the always block sensitivity list with '*' . as shown below :
+**I**n the above code when 'sel changes the always block is evaluated and the 'y' values get updated. But for a mux 'y' gets updated when ever the value of 'i0' or 'i1' changes with respect to the 'sel' value so the simulatior shows the wrong value/output . so in order to correct that that we need to replace the always block sensitivity list with '*' . as shown below :
 
  ```bash
 
@@ -844,7 +848,7 @@ endmodule
 
 ```
 
-first create the netlist using the below commands in yosys :
+First create the **netlist** using the below commands in yosys :
 
 ```bash
 read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
@@ -855,7 +859,7 @@ write_verilog ternary_operator_mux_net.v
 exit
 
 ```
-next use the iverilog with the files netlist, test bench primitives and skylab.v in mylib folder using the following commands given below :
+**Next** use the iverilog with the files netlist, test bench primitives and skylab.v in mylib folder using the following commands given below :
 
 ```bash
 
@@ -864,7 +868,7 @@ iverilog ../my_lib/verilog_model/primitives.v ../my_lib/verilog_model/sky130_fd_
   gtkwave tb_ternary_operator_mux.vcd
 
 ```
-the results of the gtk wave are shown below :
+the **results** of the gtk wave are shown below :
 
 ![terenary_op_mux_simu](https://github.com/ammulashiva/physical_design_using_asic/assets/140998900/ff66bdfd-605d-4729-9c75-e339cbbf58fb)
 
@@ -892,7 +896,7 @@ the simulation of the above example after synthesis and net list generation :
 ![bad_mux_net](https://github.com/ammulashiva/physical_design_using_asic/assets/140998900/1fd9f0e6-f57b-43f3-86c0-d186e31bc394)
 
 
-    Under this, we see a clear mismatch between the simulation and synthesis designs. The RTL file and netlist files aren't the same logic implemention. This happened due to the sensitivity listing under the RTL file.
+Under this, we see a clear mismatch between the simulation and synthesis designs. The RTL file and netlist files aren't the same logic implemention. This happened due to the sensitivity listing under the RTL file.
 
 
  

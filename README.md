@@ -660,6 +660,81 @@ the synthesised schematic is shown below :
 </details>
 
 
+<details>
+	<summary>Sequential LOgic Optimisations</summary>
+
+ Consider an example of sequential circuit :
+
+ ```bash
+module dff_const1(input clk, input reset, output reg q);
+always @(posedge clk, posedge reset)
+begin
+	if(reset)
+		q <= 1'b0;
+	else
+		q <= 1'b1;
+end
+
+endmodule
+
+```
+here use the command dfflibmab -liberty ../lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib to include the dff libs
+the synthesied schematic is shown below :
+
+
+Example 2:
+
+```bash
+module dff_const2(input clk, input reset, output reg q);
+always @(posedge clk, posedge reset)
+begin
+	if(reset)
+		q <= 1'b1;
+	else
+		q <= 1'b1;
+end
+
+endmodule
+
+```
+here use the command dfflibmab -liberty ../lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib to include the dff libs
+the synthesied schematic is shown below :
+
+
+Example 3:
+
+```bash
+module dff_const3(input clk, input reset, output reg q);
+reg q1;
+
+always @(posedge clk, posedge reset)
+begin
+	if(reset)
+	begin
+		q <= 1'b1;
+		q1 <= 1'b0;
+	end
+	else
+	begin
+		q1 <= 1'b1;
+		q <= q1;
+	end
+end
+
+endmodule
+
+```
+
+here in the above example the outputQ depends on the previous input of the input Q1 so both flops should be present so cannot be optimised further
+as shown in the below figure :
+
+
+here use the command dfflibmab -liberty ../lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib to include the dff libs
+the synthesied schematic is shown below :
+
+
+
+</details>
 
 
 

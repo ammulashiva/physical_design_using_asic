@@ -6,7 +6,7 @@
 
 [Day 2](#day-2) Timing libs,Hierarchical vs flat synthesis and efficient flop coding styles
 
-[Day 3](#day-3)
+[Day 3](#day-3) Combinational and sequential Optimizations
 
 
 
@@ -517,10 +517,50 @@ Here 'a' is 3 bit and 'y' is 6 bits wide . when a is multiplied by 9 'a' , here 
 
 ## Day 3 
  <details>
-	 <summary></summary>
+	 <summary>Summary</summary></summary>
+       
+  
  </details>
 
+<details>
+	<summary>intro.to Optimizations</summary>
 
+## Combinational logic OPtimizations
+
+# squeesing the logic to get the most optimised design
+   - Area and power savings
+# Constant Propagation
+ - Direct optimisation
+# Boolian logic Optimisations
+ - K-Map
+ - Quine-Mckluskey
+
+      here let us consider an example of constant propagation as shown in the below figure :
+
+
+
+       here Y= ((AB)+C)'
+
+       If A = 0 ;then
+       
+       Y = C'
+       In this example A is constant so the logic got opthe boolian equation is optimisedimised so the number of transisters and area got reduced.
+
+       Now consider another example in boolian logic optimization :
+
+       A?(B?C:(C?A:0)):(!C)
+
+       => A'C' +A[BC+B'AC}
+
+       => A'C' + ABC + AB'C
+
+       => A'C' + AC[B+B']
+       => A'C' + AC 
+
+In this example the boolian equation is optimised. 
+
+
+</details>
 
 
 

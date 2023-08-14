@@ -570,6 +570,89 @@ In this example the boolian equation is optimised.
 
 Consider an example in sequential logic as shown in the below figure:
 
+![sequential_ex](https://github.com/ammulashiva/physical_design_using_asic/assets/140998900/bf639199-3060-44f4-bb22-58f19f6757e3)
+
+here as D is grounded 'Q' is always '0' So
+
+Y = (A.0 )'
+
+=> y = 1 (Optimised)
+
+</details>
+
+<details>
+	<summary>Combinational LOgic Optimisations</summary>
+
+ Consider an example shown below
+
+ ```bash
+
+ module opt_check (input a , input b , output y);
+	assign y = a?b:0;
+endmodule
+
+```
+here y = a'.0 + a.b
+
+ => y = a.b 
+
+ the commands used in yosys are :
+
+ 
+```bash
+
+#yosys
+read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_verilog opt_check.v
+synth -top opt_check // synthesis of multiple_modules
+opt_clean -purge  // cleans all the unused cells
+abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+show
+
+```
+ 
+ synthesise the code using yosys the schematic is shown below :
+
+
+Example 2 :
+
+```bash
+
+ module opt_check2 (input a , input b , output y);
+	assign y = a?1:b;
+endmodule
+
+```
+here 
+
+Y = a'b +a
+
+=> Y = a + b ;
+
+the synthesised schematic is shown below :
+
+
+
+ Example 3 :
+
+```bash
+
+module opt_check3 (input a , input b, input c , output y);
+	assign y = a?(c?b:0):0;
+endmodule
+
+```
+here 
+
+Y = a'0 + a[a'.0 +ab]
+
+=> 0+ abc
+
+=> Y = a.b.c ;
+
+the synthesised schematic is shown below :
+
+
 
 
 </details>

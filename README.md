@@ -911,6 +911,40 @@ Under this, we see a clear mismatch between the simulation and synthesis designs
 
 ## Day 5 - if,case,for loop and for Generate
 
+<details>
+
+<summary><strong>If Case Constructs</strong></summary>
+ 
+</details>
+
+
+<details>
+
+<summary><strong>Hands on "Incomplete if case"</strong></summary>
+ 
+</details>
+
+
+<details>
+
+<summary><strong>Hands on "overlapping case"</strong></summary>
+ 
+</details>
+
+
+<details>
+
+<summary><strong>For loop and For generate</strong></summary>
+ 
+</details>
+
+
+
+<details>
+
+<summary><strong>Hands on "for loop" & "for generate"</strong></summary>
+ 
+</details>
 
 
 

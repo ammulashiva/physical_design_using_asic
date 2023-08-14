@@ -771,6 +771,7 @@ endmodule
 here the bits count[1:2] are unused onlythe bit cunt[0] is used so other redundancy bits are removed in the synthesis 
 the synthesised schematic is shown below :
 
+![counter_opt_schematic](https://github.com/ammulashiva/physical_design_using_asic/assets/140998900/3c988a17-2728-4083-b5f6-f759d595efd8)
 
       
 </details>

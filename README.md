@@ -613,6 +613,8 @@ show
  
  synthesise the code using yosys the schematic is shown below :
 
+![opt_check_schematic](https://github.com/ammulashiva/physical_design_using_asic/assets/140998900/a7842ea5-88a4-461d-9092-38ef95854817)
+
 
 Example 2 :
 
@@ -631,6 +633,7 @@ Y = a'b +a
 
 the synthesised schematic is shown below :
 
+![opt_check2_schematic](https://github.com/ammulashiva/physical_design_using_asic/assets/140998900/92cd7042-95ef-4579-8429-fdee7f58ca1b)
 
 
  Example 3 :
@@ -652,10 +655,12 @@ Y = a'0 + a[a'.0 +ab]
 
 the synthesised schematic is shown below :
 
-
-
+![opt_check3_schematic](https://github.com/ammulashiva/physical_design_using_asic/assets/140998900/fcfe7f28-e7f4-4823-afef-5b47fd761452)
 
 </details>
+
+
+
 
 
 

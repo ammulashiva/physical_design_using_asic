@@ -122,7 +122,7 @@ Below is the screenshot showing sucessful launch:
 <details>
 <summary><strong>Summary</strong></summary>
     
-             This section shows how I downloaded the libraries needed for the synthesys of verilog file and how i simulated and synthesized a 2x1 mux using iverilog and yosys respectively. 
+This section shows how I downloaded the libraries needed for the synthesys of verilog file and how i simulated and synthesized a 2x1 mux using iverilog and yosys respectively. 
 
 </details>
 
@@ -130,12 +130,13 @@ Below is the screenshot showing sucessful launch:
     <summary><strong>Downloading Verilog codes and libraries</strong></summary>
     The verilog codes of the 2x1 mux (good_mux.v) and its testbench (tb_good_mux.v) are taken from https://github.com/kunalg123/sky130RTLDesignAndSynthesisWorkshop.git
     and installed using the commands :
-    ```bash
+	
+```bash
     
          # mkdir VLSI
          # cd VLSI
         # git clone https://github.com/kunalg123/sky130RTLDesignAndSynthesisWorkshop.git
-    ```
+ ```
     Below image shows the library path i have downloaded :
   ![download_v_files](https://github.com/ammulashiva/physical_design_using_asic/assets/140998900/88f44d88-e652-462e-a656-11cc84c2b9a7)
 
@@ -205,18 +206,20 @@ yosys> show //shows the synthesied design
  ```bash
     cd VLSI/sky130RTLDesignAndSynthesisWorkshop/lib/
     gvim sky130_fd_sc_hd__tt_025C_1v80.lib
+
  ```
-    ![timing_lib](https://github.com/ammulashiva/physical_design_using_asic/assets/140998900/4f542fd2-7f69-4a0b-8a31-e41830a56114)
 
-    One of the fundamental parameters stored within .lib files comprises P.V.T. parameters, where P denotes Process, V denotes Voltage, and T denotes Temperature. The variations in these parameters can cause significant changes in the performance of circuits.
+![timing_lib](https://github.com/ammulashiva/physical_design_using_asic/assets/140998900/4f542fd2-7f69-4a0b-8a31-e41830a56114)
 
-    Process Variation: During the manufacturing process, there may be some deviations in the transistor characteristics, causing non-uniformity across the semiconductor wafer. Critical parameters like oxide thickness, dopant concentration, and transistor dimensions experience alterations.
+**O**ne of the fundamental parameters stored within .lib files comprises P.V.T. parameters, where P denotes Process, V denotes Voltage, and T denotes Temperature. The variations in these parameters can cause significant changes in the performance of circuits.
 
-    Voltage Variation: Voltage regulators might exhibit  variability in their output voltage  over time, inducing fluctuations in current and  impacting the operational speed of the circuits.
+**Process Variation:** During the manufacturing process, there may be some deviations in the transistor characteristics, causing non-uniformity across the semiconductor wafer. Critical parameters like oxide thickness, dopant concentration, and transistor dimensions experience alterations.
 
-    Temperature Variation: The functionality of a semiconductor devices is sensitive to changes in temperature, it effects various parameters that significantly alters the transfer function.
+**Voltage Variation:** Voltage regulators might exhibit  variability in their output voltage  over time, inducing fluctuations in current and  impacting the operational speed of the circuits.
+
+**Temperature Variation:** The functionality of a semiconductor devices is sensitive to changes in temperature, it effects various parameters that significantly alters the transfer function.
      
-    The .lib library is bucket with full of cells as shown below:
+    The **.lib** library is bucket with full of cells as shown below:
     
 ![different cells](https://github.com/ammulashiva/physical_design_using_asic/assets/140998900/238e3699-d6a9-4910-926d-13ef53ef827c)
 
@@ -237,7 +240,7 @@ each cell defines the voltage , temoerature, power leakage , area etc.. in all c
   
 ![multiple_modules](https://github.com/ammulashiva/physical_design_using_asic/assets/140998900/587aee2f-aa90-4455-b3a5-8480999e1727)
 
-In this case the module multiple_modules iinstantiates two sub_modules where the sub_module1 implements the AND gate and sub_module2 implemets the OR gate which are integrated in the multiple_modules. Synthesis the multiple module using the sollowing commands:
+In this case the module multiple_modules iinstantiates two sub_modules where the sub_module1 implements the AND gate and sub_module2 implemets the OR gate which are integrated in the multiple_modules. Synthesise the multiple module using the sollowing commands:
 
 ```bash
 
@@ -251,11 +254,11 @@ write_verilog -noattr multiple_modules_hier.v  //creates the netlist in hirearic
 !gvim multiple_modules_hier.v  // view the net list
 
 ```
-Below is the figure showing the schematic of multiple_modules:
+Below is the figure showing the **schematic of multiple_modules:**
 
 ![multiple_modules_schematic](https://github.com/ammulashiva/physical_design_using_asic/assets/140998900/fe6b563b-7680-4e1d-bb9c-250e9a523841)
 
-Below is the netlist generated with sub_modules :
+Below is the **netlist** generated with sub_modules :
 
 ```bash
 
@@ -346,14 +349,9 @@ write_verilog -noattr multiple_modules_flat.v
   
 ![multiple_modules_flat_schematic](https://github.com/ammulashiva/physical_design_using_asic/assets/140998900/5e29ab99-df3e-4e6a-a47c-73bfc87a78c1)
 
-## Steps to synthesise sub module
+### Steps to synthesise sub module
 
-    Suppose a multiplier design needs to be used in numerous instances. Rather than undergoing synthesis six
-    times independently, the preferred approach is to synthesize it once and then duplicate it within the 
-    primary module. Using module-level synthesis becomes advantageous when dealing with multiple occurrences 
-    of identical modules. Another reason for synthesizing submodule is to follow the principle of divide and
-    conque for extensive designs that may not be optimized effectively, synthesizing the design module by 
-    module ensures that each module is effectively optimized.
+Suppose a multiplier design needs to be used in numerous instances. Rather than undergoing synthesis six times independently, the preferred approach is to synthesize it once and then duplicate it within the primary module. Using module-level synthesis becomes advantageous when dealing with multiple occurrences of identical modules. Another reason for synthesizing submodule is to follow the principle of divide and conque for extensive designs that may not be optimized effectively, synthesizing the design module by module ensures that each module is effectively optimized.
     
     The commands used in Yosys to Synthesise submodule are:
 
@@ -373,11 +371,12 @@ Below figure shows the Schematic of submodule :
 <details>
 	<summary><strong>Various Flop coding styles and optimizations </strong></summary>
 
- ## Flops and flop Coding Styles
-     A flop is a Storage element which can store the data Synchronously or asynchronously, it has a input clock and a set and a reset ,the set and reset can be synchronous or asynchronus . for example if there is a large combinational circuit between two registers then it may lead to setup violation so in order to solve the problem we need to use a flop in between the combinational circuit so that the delay gets divided and setup violation doesnt happen.
+ ### Flops and flop Coding Styles
+ 
+**A** flop is a Storage element which can store the data Synchronously or asynchronously, it has a input clock and a set and a reset ,the set and reset can be synchronous or asynchronus . for example if there is a large combinational circuit between two registers then it may lead to setup violation so in order to solve the problem we need to use a flop in between the combinational circuit so that the delay gets divided and setup violation doesnt happen.
      below are the various flops with different configurations:
      
-     code for asynchronous set d flop :
+     **Code** for asynchronous set d flop :
      
 ```bash
      module dff_async_set ( input clk ,  input async_set , input d , output reg q );
@@ -391,7 +390,7 @@ end
 endmodule
 
 ```
-Code for synchronous reset d flipflop :
+Code for **synchronous reset d flipflop** :
 
 ```bash
 
@@ -407,7 +406,7 @@ endmodule
 
 ```
 
-Code for asynchronous and synchronous reset d flop :
+Code for **asynchronous and synchronous reset d flop** :
 
 ```bash
 
@@ -424,7 +423,7 @@ Code for asynchronous and synchronous reset d flop :
  endmodule
 
 ```
-Code for asynchronous reset d flop :
+Code for **asynchronous reset d flop** :
 
 ```bash
 
@@ -450,25 +449,25 @@ $./a.out
 $gtkwave <dumpfile_name.vcd>
 
 ```
-Below figure shows the simulation of asynchronous set d flop :
+Below figure shows the simulation of **asynchronous set d flop** :
 
 ![async_set_simu](https://github.com/ammulashiva/physical_design_using_asic/assets/140998900/13a6f7b6-b059-4e12-a94d-0653722c2c86)
 
-Below figure shows the simulation of  synchronous reset d flipflop:
+Below figure shows the simulation of  **synchronous reset d flipflop**:
 
 ![sync_res_simu](https://github.com/ammulashiva/physical_design_using_asic/assets/140998900/063079d3-852b-44cd-b958-cc388e9d63dd)
 
-Below figure shows the simulation of asynchronous and synchronous reset d flop :
+Below figure shows the simulation of **asynchronous and synchronous reset d flop** :
 
 ![asyncres_syncres_simu](https://github.com/ammulashiva/physical_design_using_asic/assets/140998900/07dcb88c-c515-471b-93f2-b13ef1fe28c9)
 
-Below figure shows the simulation of asynchronous reset d flop :
+Below figure shows the simulation of **asynchronous reset d flop** :
 
 ![async_res_simu](https://github.com/ammulashiva/physical_design_using_asic/assets/140998900/ec714932-6a80-4943-bcfc-3d43cd13404a)
 
 ## Some optimizations
 
-Consider the module mul2.v shown below:
+Consider the module **mul2.v** shown below:
 
 ```bash
 
@@ -484,7 +483,7 @@ now let us see how the optimizations will be done
  ![mult_2_schematic](https://github.com/ammulashiva/physical_design_using_asic/assets/140998900/c31b7665-a331-430c-bf49-b3ce7f7caf0f)
 
 
- Now consider the module mult_8.v shown below:
+ Now consider the module **mult_8.v** shown below:
 
 ```bash
 
@@ -518,17 +517,17 @@ Here 'a' is 3 bit and 'y' is 6 bits wide . when a is multiplied by 9 'a' , here 
 <details>
 	<summary><strong>Intro.to Optimizations</strong></summary>
 
-## Combinational logic OPtimizations
+### Combinational logic OPtimizations
 
-# squeesing the logic to get the most optimised design
+#### squeesing the logic to get the most optimised design
    - Area and power savings
-# Constant Propagation
+#### Constant Propagation
  - Direct optimisation
-# Boolian logic Optimisations
+#### Boolian logic Optimisations
  - K-Map
  - Quine-Mckluskey
 
-      here let us consider an example of constant propagation as shown in the below figure :
+      here let us consider an example of **constant propagation** as shown in the below figure :
 
 ![constant_propagation_ex](https://github.com/ammulashiva/physical_design_using_asic/assets/140998900/8b784e64-1eb8-4255-a3ba-01de4fada482)
 
@@ -552,11 +551,11 @@ Here 'a' is 3 bit and 'y' is 6 bits wide . when a is multiplied by 9 'a' , here 
 
 In this example the boolian equation is optimised. 
 
-## Sequential Logic Optimisations
+### Sequential Logic Optimisations
 
-# Basic
+#### Basic
  - Sequential constant Propagation
-# Advanced [not covered as a part ]
+#### Advanced [not covered as a part ]
  - State Optimization
  - Retiming
  - sequential logic cloning
@@ -907,3 +906,19 @@ the simulation of the above example after synthesis and net list generation :
 </details>
 
 ## Day 5 - if,case,for loop and for Generate
+
+
+
+
+
+# References
+
+1. https://github.com/YosysHQ/yosys
+2. https://github.com/steveicarus/iverilog
+3. https://github.com/gtkwave/gtkwave
+4. https://github.com/The-OpenROAD-Project/OpenSTA
+5. https://github.com/ngspice/ngspice
+6. https://github.com/RTimothyEdwards/magic
+7. https://github.com/The-OpenROAD-Project/OpenLane
+8. https://github.com/kunalg123/sky130RTLDesignAndSynthesisWorkshop
+9. https://miro.com/

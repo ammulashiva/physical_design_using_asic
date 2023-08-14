@@ -877,6 +877,26 @@ iverilog ../my_lib/verilog_model/primitives.v ../my_lib/verilog_model/sky130_fd_
   gtkwave tb_ternary_operator_mux.vcd
 
 ```
+the results of the gtk wave are shown below :
+
+![terenary_op_mux_simu](https://github.com/ammulashiva/physical_design_using_asic/assets/140998900/ff66bdfd-605d-4729-9c75-e339cbbf58fb)
+
+ Let us Consider an another example where the Synthesis and simulation mismatch happens :
+
+```bash
+
+module bad_mux (input i0 , input i1 , input sel , output reg y);
+always @ (sel)
+begin
+	if(sel)
+		y <= i1;
+	else 
+		y <= i0;
+end
+endmodule
+
+```
+the simulation output for the above example is given by :
 
 
  

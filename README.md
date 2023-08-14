@@ -848,5 +848,36 @@ endmodule
 <details>
 	<Summary>Labs On GLS and Synthesis Simulation Mismatch </Summary>
 
+Condider an example shown below:
+```bash
+
+module ternary_operator_mux (input i0 , input i1 , input sel , output y);
+	assign y = sel?i1:i0;
+endmodule
+
+```
+
+first create the netlist using the below commands in yosys :
+
+```bash
+read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_verilog ternary_operator_mux.v
+synth -top ternary_operator_mux
+abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+write_verilog ternary_operator_mux_net.v
+exit
+
+```
+next use the iverilog with the files netlist, test bench primitives and skylab.v in mylib folder using the following commands given below :
+
+```bash
+
+iverilog ../my_lib/verilog_model/primitives.v ../my_lib/verilog_model/sky130_fd_sc_hd.v ternary_operator_mux_net.v tb_ternary_operator_mux.v
+  ./a.out
+  gtkwave tb_ternary_operator_mux.vcd
+
+```
+
+
  
 </details>

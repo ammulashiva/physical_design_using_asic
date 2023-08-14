@@ -1,20 +1,8 @@
 # physical_design_using_asic
 
-[Day 0](#day-0) installation of required softwares
-
-[Day 1](#day-1) getting familiar with yosys, iverilog and gtkwave
-
-[Day 2](#day-2) Timing libs,Hierarchical vs flat synthesis and efficient flop coding styles
-
-[Day 3](#day-3) Combinational and sequential Optimizations
-
-[Day 4](#day-4) GLS, Blocking vs non blocking and Synthesis -simulation mismatch
-
-[Day 5](#day-5) if,case,for loop and for generate
 
 
-
-## Day 0 
+## Day 0 - Installation of Required Softwares
 
 <details>
 <summary> Summary </summary>
@@ -129,7 +117,7 @@ Below is the screenshot showing sucessful launch:
 ![magic2](https://github.com/ammulashiva/physical_design_using_asic/assets/140998900/bd855d1b-fce5-467c-8922-1dd30d994c64)
 </details>
 
-## Day 1
+## Day 1 - Getting familiar with Yosys, Iverilog and gtkwave
 
 <details>
 <summary>Summary</summary>
@@ -201,7 +189,7 @@ yosys> show //shows the synthesied design
 </details>
 
  
-## Day 2
+## Day 2 - Timing libs,Hierarchical vs Flat Synthesis and Efficient Flop Coding Styles
 <details>
 	<summary>Summary</summary>
 
@@ -519,7 +507,7 @@ Here 'a' is 3 bit and 'y' is 6 bits wide . when a is multiplied by 9 'a' , here 
  
 </details>
 
-## Day 3 
+## Day 3 - Combinational and Sequential Optimizations
  <details>
 	 <summary>Summary</summary>
   here combinational and sequential logics have been introduced and some examples were done on sequential and combinational optimisations.
@@ -780,7 +768,7 @@ the synthesised schematic is shown below :
       
 </details>
 
-## Day 4
+## Day 4 -  GLS, Blocking vs non Blocking and Synthesis - Simulation mismatch
 <details>
 	<summary>GLS, Blocking vs non blocking and Synthesis -simulation mismatch</summary>
 
@@ -910,3 +898,7 @@ the simulation of the above example after synthesis and net list generation :
 
  
 </details>
+
+
+
+## Day 5 - if,case,for loop and for Generate

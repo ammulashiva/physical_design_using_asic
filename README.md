@@ -906,6 +906,20 @@ Under this, we see a clear mismatch between the simulation and synthesis designs
 	
 <summary><strong>Lab on Synthesis Simulation mismatch and B)locking Statments </strong></summary>
 
+Consider an example 
+
+```bash
+module blocking_caveat (input a , input b , input  c, output reg d); 
+reg x;
+always @ (*)
+begin
+	d = x & c;
+	x = a | b;
+end
+endmodule
+
+```
+The RTL simulation of the above code is given beloow :
 
  
 </details>

@@ -537,7 +537,7 @@ Here 'a' is 3 bit and 'y' is 6 bits wide . when a is multiplied by 9 'a' , here 
 
       here let us consider an example of constant propagation as shown in the below figure :
 
-
+![constant_propagation_ex](https://github.com/ammulashiva/physical_design_using_asic/assets/140998900/8b784e64-1eb8-4255-a3ba-01de4fada482)
 
        here Y= ((AB)+C)'
 
@@ -558,6 +558,18 @@ Here 'a' is 3 bit and 'y' is 6 bits wide . when a is multiplied by 9 'a' , here 
        => A'C' + AC 
 
 In this example the boolian equation is optimised. 
+
+## Sequential Logic Optimisations
+
+# Basic
+ - Sequential constant Propagation
+# Advanced [not covered as a part ]
+ - State Optimization
+ - Retiming
+ - sequential logic cloning
+
+Consider an example in sequential logic as shown in the below figure:
+
 
 
 </details>

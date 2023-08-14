@@ -898,6 +898,15 @@ endmodule
 ```
 the simulation output for the above example is given by :
 
+![bad_mux_simu](https://github.com/ammulashiva/physical_design_using_asic/assets/140998900/a1378187-3cfd-4639-81b1-cced9a65b859)
+
+the simulation of the above example after synthesis and net list generation :
+
+![bad_mux_net](https://github.com/ammulashiva/physical_design_using_asic/assets/140998900/1fd9f0e6-f57b-43f3-86c0-d186e31bc394)
+
+
+    Under this, we see a clear mismatch between the simulation and synthesis designs. The RTL file and netlist files aren't the same logic implemention. This happened due to the sensitivity listing under the RTL file.
+
 
  
 </details>

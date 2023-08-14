@@ -791,6 +791,57 @@ the synthesised schematic is shown below :
       Here gate level netlist is taken and the testbench for it and the Gte level verilog models are given to the iverilog to generate a value change dump format which is then given to the gtkwave to view the output .
       below figure shows the process :
 
+      ![GLS](https://github.com/ammulashiva/physical_design_using_asic/assets/140998900/7adfa7ce-5dff-4d4e-bab1-4781d0ee9895)
+
+there is a need th check the netlist after the synthesis because there can be a mismatch. 
+# Reasons to Synthesis And Simulation Mismatch :
+ - Missing Sensitivity List
+ - Blocking VS Non Bolcking List
+ - Non standard Verilog Coding
+
+ Consider an example for missing sensitivity list :
+
+ ```bash
+
+module good_mux (input i0 , input i1 , input sel , output reg y);
+always @ (sel)
+begin
+	if(sel)
+		y <= i1;
+	else 
+		y <= i0;
+end
+endmodule
+
+```
+in the above code when 'sel changes the always block is evaluated and the 'y' values get updated. But for a mux 'y' gets updated when ever the value of 'i0' or 'i1' changes with respect to the 'sel' value so the simulatior shows the wrong value/output . so in order to correct that that we need to replace the always block sensitivity list with '*' . as shown below :
+
+ ```bash
+
+module good_mux (input i0 , input i1 , input sel , output reg y);
+always @ (*)
+begin
+	if(sel)
+		y <= i1;
+	else 
+		y <= i0;
+end
+endmodule
+
+```
+
+## Blocking And Non Blocking Statements in Verilog :
+
+
+# Inside Always Block
+ - if we use operator '=' then
+ - executes the ststments in the order it is written
+ - so the first statment is evaluated before the second statment
+
+# Inside Always Block
+ - if we use operator '<=' then
+ - executes all the RHS when always block is entered and assigns to LHS .
+ - Parallel Evaluation .
       
 </details>
 

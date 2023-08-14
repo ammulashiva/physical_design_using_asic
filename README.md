@@ -745,5 +745,34 @@ the synthesied schematic is shown below :
 </details>
 
 
+<details>
+	<summary>sequential optimisations for unused outputs</summary>
+
+     consider an example shown below :
+
+```bash
+
+module counter_opt (input clk , input reset , output q);
+reg [2:0] count;
+assign q = count[0];
+
+always @(posedge clk ,posedge reset)
+begin
+	if(reset)
+		count <= 3'b000;
+	else
+		count <= count + 1;
+end
+ 
+endmodule
+
+```
+
+here the bits count[1:2] are unused onlythe bit cunt[0] is used so other redundancy bits are removed in the synthesis 
+the synthesised schematic is shown below :
+
+
+      
+</details>
 
 

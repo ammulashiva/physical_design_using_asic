@@ -906,7 +906,7 @@ Under this, we see a clear mismatch between the simulation and synthesis designs
 	
 <summary><strong>Lab on Synthesis Simulation mismatch and B)locking Statments </strong></summary>
 
-Consider an example 
+Consider an **example**
 
 ```bash
 module blocking_caveat (input a , input b , input  c, output reg d); 
@@ -919,8 +919,19 @@ end
 endmodule
 
 ```
-The RTL simulation of the above code is given beloow :
+The **RTL simulation** of the above code is given beloow :
 
+![blocking_caveat_simu](https://github.com/ammulashiva/physical_design_using_asic/assets/140998900/c694887a-b710-435d-bff7-6b56c1ff5886)
+
+The **Synthesised schematic** is shown below :
+
+![blocking_caveat_schematic](https://github.com/ammulashiva/physical_design_using_asic/assets/140998900/9ec26e10-6153-4ea4-a5a0-577050127ad9)
+
+The Simulation of the **generated netlist** is shown below :
+
+![blocking caveat_net](https://github.com/ammulashiva/physical_design_using_asic/assets/140998900/eb49979f-1722-4ab0-ab18-75ede7c174e4)
+
+ Here in the above simulations we can clearly see that booth simulations are different . in this case we can use the un Blocking statments to write the code and get our expected results.
  
 </details>
 

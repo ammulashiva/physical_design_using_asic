@@ -681,6 +681,7 @@ endmodule
 here use the command dfflibmab -liberty ../lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib to include the dff libs
 the synthesied schematic is shown below :
 
+![dff_const1](https://github.com/ammulashiva/physical_design_using_asic/assets/140998900/368b1b7d-9376-4e7c-b3c1-f5a0ad4fc972)
 
 Example 2:
 
@@ -700,6 +701,8 @@ endmodule
 here use the command dfflibmab -liberty ../lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib to include the dff libs
 the synthesied schematic is shown below :
 
+
+![dff_const2](https://github.com/ammulashiva/physical_design_using_asic/assets/140998900/85b07b6f-447e-4ec1-8c6c-69247ac0333b)
 
 Example 3:
 
@@ -728,9 +731,13 @@ endmodule
 here in the above example the outputQ depends on the previous input of the input Q1 so both flops should be present so cannot be optimised further
 as shown in the below figure :
 
+![dff_const3_diagram](https://github.com/ammulashiva/physical_design_using_asic/assets/140998900/6764fc12-28b6-441e-b12e-b6b86c0e127b)
+
 
 here use the command dfflibmab -liberty ../lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib to include the dff libs
 the synthesied schematic is shown below :
+
+![dff_const3](https://github.com/ammulashiva/physical_design_using_asic/assets/140998900/b79d7ad5-9714-4009-b04f-e8ca80ea29a8)
 
 
 

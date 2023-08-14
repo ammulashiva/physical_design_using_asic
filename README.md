@@ -906,6 +906,7 @@ Under this, we see a clear mismatch between the simulation and synthesis designs
 	
 <summary><strong>Lab on Synthesis Simulation mismatch and B)locking Statments </strong></summary>
 
+
  
 </details>
 

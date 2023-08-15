@@ -1070,12 +1070,17 @@ In the above example according to the logic the output should stay or latched wh
 
 ![incomp_if2_simu](https://github.com/ammulashiva/physical_design_using_asic/assets/140998900/15235dc9-7ab1-44aa-9769-322d2b48ad6b)
 
-here when the **I2** is **0** a latch is inferred to fix the output at that level let us see the **Schematic** after the synthesis is done 
+here when the **I2** is **0** a latch is inferred to fix the output at that level let us see the **Schematic** after the synthesis is done is shown below :
 
-<summary><strong>Hands on "overlapping case"</strong></summary>
- 
+![incomp_if2_schematic](https://github.com/ammulashiva/physical_design_using_asic/assets/140998900/50dcb5a3-dd3a-49a3-92de-2dd76c160ec7)
+
 </details>
+ 
+<details>
+	
+<summary><strong>Hands on "overlapping case"</strong></summary>
 
+</details>
 
 <details>
 

@@ -1080,6 +1080,65 @@ here when the **I2** is **0** a latch is inferred to fix the output at that leve
 	
 <summary><strong>Hands on "overlapping case"</strong></summary>
 
+consider an **Example_1** shown below
+
+```bash
+
+module comp_case (input i0 , input i1 , input i2 , input [1:0] sel, output reg y);
+always @ (*)
+begin
+	case(sel)
+		2'b00 : y = i0;
+		2'b01 : y = i1;
+		default : y = i2;
+	endcase
+end
+endmodule
+
+```
+
+The RTL Simulation generated is :
+
+
+The Synthesised Design is :
+
+
+**Example_2** :
+
+```bash
+
+```
+
+The RTL Simulation generated is :
+
+
+The Synthesised Design is :
+
+**Example_3** :
+
+```bash
+
+```
+
+The RTL Simulation generated is :
+
+
+The Synthesised Design is :
+
+
+
+**Example_4** :
+
+```bash
+
+```
+
+
+The Synthesised Design is :
+
+
+
+
 </details>
 
 <details>

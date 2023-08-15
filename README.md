@@ -1178,28 +1178,13 @@ endmodule
 
 The RTL Simulation generated is :
 
-![incomp_case_simu](https://github.com/ammulashiva/physical_design_using_asic/assets/140998900/0615e3dd
+![incomp_case_simu](https://github.com/ammulashiva/physical_design_using_asic/assets/140998900/033fb3b2-5190-4818-bf7e-4de3bc6cb91b)
 
 The Synthesised Design is :
 
 ![incomp_case_schematic](https://github.com/ammulashiva/physical_design_using_asic/assets/140998900/3b530bba-cd05-48db-8790-e6d1a9d985d1)
 
 </details>
-
-<details>
-
-<summary><strong>For loop and For generate</strong></summary>
- 
-</details>
-
-
-
-<details>
-
-<summary><strong>Hands on "for loop" & "for generate"</strong></summary>
- 
-</details>
-
 
 
 

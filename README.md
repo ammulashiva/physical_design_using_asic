@@ -1099,45 +1099,90 @@ endmodule
 
 The RTL Simulation generated is :
 
+![comp_case_simu](https://github.com/ammulashiva/physical_design_using_asic/assets/140998900/883a4bd4-2323-4d9e-8198-0070a3c47d5f)
 
 The Synthesised Design is :
 
+![comp_case_schematic](https://github.com/ammulashiva/physical_design_using_asic/assets/140998900/cd969db6-555e-4916-abbb-ec6c615de7cd)
 
 **Example_2** :
 
 ```bash
 
+module bad_case (input i1 , input i1, input i2, input i3 , input [1:0] sel, output reg y);
+always @(*)
+begin
+	case(sel)
+		2'b00: y = i0;
+		2'b01: y = i1;
+		2'b10: y = i2;
+		2'b1?: y = i3;
+		//2'b11: y = i3;
+	endcase
+end
+
+endmodule
+
 ```
 
 The RTL Simulation generated is :
 
+![bad_case_simu](https://github.com/ammulashiva/physical_design_using_asic/assets/140998900/e64b7c5b-9f37-438e-9e61-65231c1d2172)-4aed-4640-8e04-66cee0a243f9)
 
 The Synthesised Design is :
+
+![bad_case_schematic](https://github.com/ammulashiva/physical_design_using_asic/assets/140998900/4cb7ff2b-74fd-4145-bbdd-6ba044d6fd65)
 
 **Example_3** :
 
 ```bash
 
+module partial_case_assign (input i0 , input i1 , input i2 , input [1:0] sel, output reg y , output reg x);
+always @ (*)
+begin
+	case(sel)
+		2'b00 : begin
+			y = i0;
+			x = i2;
+			end
+		2'b01 : y = i1;
+		default : begin
+		           x = i1;
+			   y = i2;
+			  end
+	endcase
+end
+endmodule
+
 ```
-
-The RTL Simulation generated is :
-
 
 The Synthesised Design is :
 
-
+![partial_case_assign_sche](https://github.com/ammulashiva/physical_design_using_asic/assets/140998900/635174b9-5876-41d2-86a0-894001defa30)
 
 **Example_4** :
 
 ```bash
 
+module incomp_case (input i0 , input i1 , input i2 , input [1:0] sel, output reg y);
+always @ (*)
+begin
+	case(sel)
+		2'b00 : y = i0;
+		2'b01 : y = i1;
+	endcase
+end
+endmodule
+
 ```
 
+The RTL Simulation generated is :
+
+![incomp_case_simu](https://github.com/ammulashiva/physical_design_using_asic/assets/140998900/0615e3dd
 
 The Synthesised Design is :
 
-
-
+![incomp_case_schematic](https://github.com/ammulashiva/physical_design_using_asic/assets/140998900/3b530bba-cd05-48db-8790-e6d1a9d985d1)
 
 </details>
 

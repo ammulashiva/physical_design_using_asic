@@ -951,7 +951,7 @@ The if statement controls conditional execution of other sequential statements. 
 
  ```bash
 
-if(<condition>) begin
+if(<condition_1>) begin
   ...
 end
 else if(<condition>) begin
@@ -975,10 +975,50 @@ end
 
 ```
 
+    It can be said that, when the condition 1 is valid, statement 1 is of the highest priority, and the rest of the condtions aren't checked for.
+    Similarly, we check for which condtion falls true. In case none do, the else block statements takes highest priority.
+    The if-else statements can be designed using muxs as shown in the below figure
+
 ![if_with _mux](https://github.com/ammulashiva/physical_design_using_asic/assets/140998900/8273c5cf-31df-4a6f-928d-fb4bfb54741d)
+
+### Cautions while using if-else
+
+ - In case we miss the else block, it can cause an inferred latch.
+ - It is a latch that wasn't intended in the design.
+ - the formation of a latch with mux is shown below 
 
 ![Pasted image](https://github.com/ammulashiva/physical_design_using_asic/assets/140998900/ea2c65ae-fee2-4e21-a45e-208528245fcc)
 
+### Case 
+
+**Description**
+
+The case statement starts with a case keyword followed by the case expression (in parenthesis) and case items or default statement. It ends with the endcasekeyword. The default statement is optional and should be used only once. A case item contains a list of one or more case item expressions, separated by comma, and the case item statement. The case item expression and the case item statement should be separated by a colon.
+
+During the evaluation of the case statement, all case item expressions are evaluated and compared in the order in which they are given. If the first case item expression matches the case expression, then the statement which is associated with that expression is executed and the execution of the case statement is terminated. If comparison fails, then the next case item expression is evaluated and compared with the case expression. If all comparisons fail and the default section is given, then its statements are executed. Otherwise none of the case items will be executed.
+
+Both case expression and case item expressions should have the same bit length. None of the expressions are required to be a constant expression. 
+
+Syntax for the Case Statment is given Below :
+
+```bash
+
+case (expression)
+
+  expression : statement ;
+
+  expression : statement ;
+
+default : statement ;
+
+endcase
+
+```
+### Cautions while using case
+
+ - In case we miss the default block, it can cause an inferred latch.
+ - Always complete all the expressions of the case.
+ - dont write two expressions which simultaneously takes same values while executing case statment
 
 
 </details>

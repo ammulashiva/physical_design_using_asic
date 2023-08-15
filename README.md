@@ -939,7 +939,7 @@ The Simulation of the **generated netlist** is shown below :
 
 <details>
 
-<summary><strong>If Case Constructs</strong></summary>
+<summary><strong>If and Case Constructs</strong></summary>
 
 ### If Statment
 

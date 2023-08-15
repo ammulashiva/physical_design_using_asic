@@ -943,13 +943,13 @@ The Simulation of the **generated netlist** is shown below :
 
 ### If Statment
 
-### Description 
+**Description** 
 
 The if statement controls conditional execution of other sequential statements. It contains at least one Boolean condition (specified after the if keyword). The remaining conditions are specified with the elsif clause. The else clause is treated as elsif true then. Conditions are evaluated one by one until any of them turns to be true or there are no more conditions to be checked for. When a condition is true then the sequence of statements specified after the then clause is executed. If no condition is met then the control is passed to the next statement after the if statement. 
 
 **Syntax** for If Statment :
 
- ...bash
+ ```bash
 
 if(<condition>) begin
   ...
@@ -974,6 +974,10 @@ else begin
 end
 
 ```
+
+![if_with _mux](https://github.com/ammulashiva/physical_design_using_asic/assets/140998900/8273c5cf-31df-4a6f-928d-fb4bfb54741d)
+
+![mux_as _latch](https://github.com/ammulashiva/physical_design_using_asic/assets/140998900/f664cc51-d7ce-4cc9-b949-2a62880081eb)
 
 
 </details>

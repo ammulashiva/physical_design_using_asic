@@ -977,7 +977,8 @@ end
 
 ![if_with _mux](https://github.com/ammulashiva/physical_design_using_asic/assets/140998900/8273c5cf-31df-4a6f-928d-fb4bfb54741d)
 
-![mux_as _latch](https://github.com/ammulashiva/physical_design_using_asic/assets/140998900/f664cc51-d7ce-4cc9-b949-2a62880081eb)
+![Pasted image](https://github.com/ammulashiva/physical_design_using_asic/assets/140998900/ea2c65ae-fee2-4e21-a45e-208528245fcc)
+
 
 
 </details>

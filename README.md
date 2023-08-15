@@ -1041,6 +1041,15 @@ end
 endmodule
 
 ```
+In the above example according to the logic the output should stay or latched when **I0** is **1'b0** let us see the simulation of the RTL code :
+
+![incomp_if_simu](https://github.com/ammulashiva/physical_design_using_asic/assets/140998900/376f69ad-424a-4e8f-93da-88706889a5aa)
+
+The **Schematic** after synthesis is shown below :
+
+![incomp_if_schematic](https://github.com/ammulashiva/physical_design_using_asic/assets/140998900/378883c8-54fa-4310-8adb-93d822ef03f9)
+
+
 **Example_2**
 
 ```bash
@@ -1057,11 +1066,11 @@ end
 endmodule
 
 ```
+In the above example according to the logic the output should stay or latched when **I2** is **1'b0** let us see the simulation of the RTL code :
 
-</details>
+![incomp_if2_simu](https://github.com/ammulashiva/physical_design_using_asic/assets/140998900/15235dc9-7ab1-44aa-9769-322d2b48ad6b)
 
-
-<details>
+here when the **I2** is **0** a latch is inferred to fix the output at that level let us see the **Schematic** after the synthesis is done 
 
 <summary><strong>Hands on "overlapping case"</strong></summary>
  

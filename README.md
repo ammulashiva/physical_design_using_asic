@@ -1355,12 +1355,15 @@ endmodule
 
 - Running RTL simulation using iverilog and gtkwave.
 
+![Screenshot from 2023-08-16 12-31-55](https://github.com/ammulashiva/physical_design_using_asic/assets/140998900/a79e6e6e-8dda-4791-ad1c-f2f508413c13)
 
 - Running synthesis using yosys and generating the hardware and writing netlist file.
 
+![Screenshot from 2023-08-16 12-34-51](https://github.com/ammulashiva/physical_design_using_asic/assets/140998900/e211ab8c-8490-4869-b985-0d342d6628d7)
 
 - Running GLS using iverilog and gtkwave with the netlist file.
 
+![Screenshot from 2023-08-16 12-37-15](https://github.com/ammulashiva/physical_design_using_asic/assets/140998900/35041a9d-9ec3-4984-8de0-2adb37ce958d)
 
 - We see the same simulation and GLS waveform, thus the ripple carry adder logic is correct and has been correctly synthesizer. The advantage of using generate for is that we have to instantiate once and the code multiple copies, ie multiple instances as defined.
 

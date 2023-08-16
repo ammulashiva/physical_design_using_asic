@@ -1314,13 +1314,15 @@ endmodule
 
 - Running RTL simulation using iverilog and GTKwave.
 
+![Screenshot from 2023-08-16 12-19-03](https://github.com/ammulashiva/physical_design_using_asic/assets/140998900/34d9d370-cc01-4d5d-a8cf-90558d66d5eb)
   
-
 - Running synthesis using yosys.
 
+![Screenshot from 2023-08-16 12-21-23](https://github.com/ammulashiva/physical_design_using_asic/assets/140998900/f0292279-54fd-440f-afb8-81ecd9517cdf)
 
 - Running GLS using iverilog and GTKwave with the netlist file generated during synthesis.
 
+![Screenshot from 2023-08-16 12-23-57](https://github.com/ammulashiva/physical_design_using_asic/assets/140998900/9114c776-7097-415c-89af-15e3512f0ee3)
 
 - We see that both the waveforms for GLS and RTL simulation are the same. Thus we have the correct logic implementataion for demux. 
 
@@ -1353,15 +1355,12 @@ endmodule
 
 - Running RTL simulation using iverilog and gtkwave.
 
-![Screenshot from 2023-08-16 00-20-41](https://github.com/Shant1R/Shant_IIITB/assets/59409568/d2a847d3-11b2-43d7-ba48-1483383f3e44)
 
 - Running synthesis using yosys and generating the hardware and writing netlist file.
 
-![Screenshot from 2023-08-16 00-23-54](https://github.com/Shant1R/Shant_IIITB/assets/59409568/258075f0-68ca-4167-b193-c1d4d4cdf570)
 
 - Running GLS using iverilog and gtkwave with the netlist file.
 
-![Screenshot from 2023-08-16 00-24-58](https://github.com/Shant1R/Shant_IIITB/assets/59409568/ad05003b-f6dc-470d-bccf-72427ac15b6f)
 
 - We see the same simulation and GLS waveform, thus the ripple carry adder logic is correct and has been correctly synthesizer. The advantage of using generate for is that we have to instantiate once and the code multiple copies, ie multiple instances as defined.
 

@@ -1314,15 +1314,13 @@ endmodule
 
 - Running RTL simulation using iverilog and GTKwave.
 
-  ![Screenshot from 2023-08-16 00-07-16](https://github.com/Shant1R/Shant_IIITB/assets/59409568/3fa23e02-cf39-48af-8e55-c804dcbf0a6f)
+  
 
 - Running synthesis using yosys.
 
-![Screenshot from 2023-08-16 00-08-20](https://github.com/Shant1R/Shant_IIITB/assets/59409568/a5732413-bd44-4c6d-8e17-a191b5b228da)
 
 - Running GLS using iverilog and GTKwave with the netlist file generated during synthesis.
 
-![Screenshot from 2023-08-16 00-08-52](https://github.com/Shant1R/Shant_IIITB/assets/59409568/206d4a14-feb8-4eb3-bf93-f11102f5b3da)
 
 - We see that both the waveforms for GLS and RTL simulation are the same. Thus we have the correct logic implementataion for demux. 
 

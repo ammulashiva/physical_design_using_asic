@@ -1277,12 +1277,15 @@ endmodule
 
 - Running RTL simulaltion using iverilog and gtkwave.
 
+![mux_generate_rtl_simu](https://github.com/ammulashiva/physical_design_using_asic/assets/140998900/0bf15451-560b-42f6-b1d9-aae97e8d44e2)
 
 - Running synthesis using yosys.
 
+![mux_generate_schematic](https://github.com/ammulashiva/physical_design_using_asic/assets/140998900/c551b629-8e5d-456a-b7bb-024d80b055ab)
 
 - Running GLS using iverilog and gtkwave and the netlist attained in syhthesis. 
 
+![mux_generate_net_simu](https://github.com/ammulashiva/physical_design_using_asic/assets/140998900/b92ff793-943e-4aec-a531-0c950a7aa34e)
 
 - It is observed that both the RTL simulation and GLS have same output waveform. Thus we have the correct design.
 

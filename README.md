@@ -1247,7 +1247,124 @@ endgenerate
 
 </details>
 
+<details>
 
+<summary><strong>Hands on "for loop" & "for generate"</strong></summary>
+
+Under this section, we go through some implementations, simulation and synthesis for a better understanding.
+
+**Example_1 - MUX**
+
+- In this, we implement a mux using for loop.Advantage of this method over if-case method is that we don't have to write multiple lines. For a 64 input mux, using if-case we need over 64 lines of code, whereas the same can be done under 5-6 lines using for loop.
+
+-  RTL code for mux_generate.v
+
+```bash
+
+module mux_generate (input i0 , input i1, input i2 , input i3 , input [1:0] sel  , output reg y);
+wire [3:0] i_int;
+assign i_int = {i3,i2,i1,i0};
+integer k;
+always @ (*)
+begin
+for(k = 0; k < 4; k=k+1) begin
+	if(k == sel)
+		y = i_int[k];
+end
+end
+endmodule
+```
+
+- Running RTL simulaltion using iverilog and gtkwave.
+
+
+- Running synthesis using yosys.
+
+
+- Running GLS using iverilog and gtkwave and the netlist attained in syhthesis. 
+
+
+- It is observed that both the RTL simulation and GLS have same output waveform. Thus we have the correct design.
+
+
+**Lab 2 - DEMUX**
+- Under this, we follow up with the implementation of demux
+- RTL code for demux_generate.v
+
+```bash
+module demux_generate (output o0 , output o1, output o2 , output o3, output o4, output o5, output o6 , output o7 , input [2:0] sel  , input i);
+reg [7:0]y_int;
+assign {o7,o6,o5,o4,o3,o2,o1,o0} = y_int;
+integer k;
+always @ (*)
+begin
+y_int = 8'b0;
+for(k = 0; k < 8; k++) begin
+	if(k == sel)
+		y_int[k] = i;
+end
+end
+endmodule
+
+
+```
+
+- Running RTL simulation using iverilog and GTKwave.
+
+  ![Screenshot from 2023-08-16 00-07-16](https://github.com/Shant1R/Shant_IIITB/assets/59409568/3fa23e02-cf39-48af-8e55-c804dcbf0a6f)
+
+- Running synthesis using yosys.
+
+![Screenshot from 2023-08-16 00-08-20](https://github.com/Shant1R/Shant_IIITB/assets/59409568/a5732413-bd44-4c6d-8e17-a191b5b228da)
+
+- Running GLS using iverilog and GTKwave with the netlist file generated during synthesis.
+
+![Screenshot from 2023-08-16 00-08-52](https://github.com/Shant1R/Shant_IIITB/assets/59409568/206d4a14-feb8-4eb3-bf93-f11102f5b3da)
+
+- We see that both the waveforms for GLS and RTL simulation are the same. Thus we have the correct logic implementataion for demux. 
+
+**Lab 3 - Ripple Carry Adder**
+
+- Under this, we look into implementation of an 8 bit ripple carry adder.
+- In this we need 8 single bit adders, that is instantiate single bit full adder 8 times. We implement *generate for* for making this into a simple and shorter code.
+
+- RTL file for rca.v
+```bash
+module rca (input [7:0] num1 , input [7:0] num2 , output [8:0] sum);
+wire [7:0] int_sum;
+wire [7:0]int_co;
+
+genvar i;
+generate
+	for (i = 1 ; i < 8; i=i+1) begin
+		fa u_fa_1 (.a(num1[i]),.b(num2[i]),.c(int_co[i-1]),.co(int_co[i]),.sum(int_sum[i]));
+	end
+
+endgenerate
+fa u_fa_0 (.a(num1[0]),.b(num2[0]),.c(1'b0),.co(int_co[0]),.sum(int_sum[0]));
+
+
+assign sum[7:0] = int_sum;
+assign sum[8] = int_co[7];
+endmodule
+
+```  
+
+- Running RTL simulation using iverilog and gtkwave.
+
+![Screenshot from 2023-08-16 00-20-41](https://github.com/Shant1R/Shant_IIITB/assets/59409568/d2a847d3-11b2-43d7-ba48-1483383f3e44)
+
+- Running synthesis using yosys and generating the hardware and writing netlist file.
+
+![Screenshot from 2023-08-16 00-23-54](https://github.com/Shant1R/Shant_IIITB/assets/59409568/258075f0-68ca-4167-b193-c1d4d4cdf570)
+
+- Running GLS using iverilog and gtkwave with the netlist file.
+
+![Screenshot from 2023-08-16 00-24-58](https://github.com/Shant1R/Shant_IIITB/assets/59409568/ad05003b-f6dc-470d-bccf-72427ac15b6f)
+
+- We see the same simulation and GLS waveform, thus the ripple carry adder logic is correct and has been correctly synthesizer. The advantage of using generate for is that we have to instantiate once and the code multiple copies, ie multiple instances as defined.
+
+</details>
 
 
 

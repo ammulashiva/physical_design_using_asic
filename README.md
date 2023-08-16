@@ -1186,6 +1186,71 @@ The Synthesised Design is :
 
 </details>
 
+<details>
+
+<summary><strong>For loop and For generate</strong></summary>
+
+ There are two methods of looping in verilog :
+
+- for loop
+- generate followed by for loop
+
+**For loop**
+
+The for loop iterates till the mentioned condition is satisfied. The execution of for loop depends on :
+
+**Initialization:**  An initial value of the variable is set. It is executed only once.
+
+**Condition:** A condition or expression is evaluated. If it is evaluated to be the true body of for loop (statements inside begin and end) are executed else, the loop terminates.
+
+**Update:** After execution of for loop body, the variable value is updated
+
+**Example**
+
+```bash
+
+input reg [31:0] inp;
+integer i;
+always @(*)
+begin
+  for (i=0;i<32;i=i+1)
+  begin
+    if(i == sel)
+      y = inp[i];
+  end
+end 
+```
+
+- Under this example we take a 32 bit input, and we loop in and take the output for y bit wise using for loop. 
+
+  
+**Generate for loop**
+The generate statement in Verilog is a very useful construct that generates synthesizable code during elaboration time dynamically. The simulator provides an elaborated code of the ‘generate’ block. It provides the below facilities:
+
+- To generate multiple module instances or code repetition.
+- Conditionally instantiate a block of code based on the Verilog parameter, however, the parameter is not permitted in the generate statement.
+- It basically provides control on variables, functions, tasks, and instantiation declarations. A generate block has been written within generate and endgenerate keywords.
+
+```bash
+
+genvar i;
+generate
+  for(i=0;i<3;i=i+1)
+    begin
+      and u1 (.a(a[i]) , .b(b[i]) , .y(y[i]));
+    end
+endgenerate
+
+```
+
+- In this example, we instantiate *and* gate u1 3 times using generate for loop.
+
+</details>
+
+
+
+
+
 
 
 # References
